@@ -132,9 +132,17 @@ footer a{color:var(--gold);text-decoration:none}
 
 <script>
 const blogs = [
-  {
-    id: 1,
-    cat: "Beginner's Guide",
+  {id:1, url:"what-is-off-plan-property-dubai.html", cat:"Beginner's Guide", title:"What Is Off-Plan Property in Dubai and How Does It Work?", date:"May 2026", excerpt:"A complete beginner's guide to buying off-plan property in Dubai — from what it means to how the process works step by step.", img:"https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&q=80"},
+  {id:2, url:"best-areas-buy-off-plan-dubai.html", cat:"Investment Guide", title:"The 7 Best Areas to Buy Off-Plan Property in Dubai in 2026", date:"May 2026", excerpt:"From Downtown Dubai to Emaar South — a detailed breakdown of Dubai's top areas for off-plan investment, with price points, yields and growth potential.", img:"https://images.unsplash.com/photo-1518684079-3c830dcef090?w=800&q=80"},
+  {id:3, url:"emaar-properties-dubai-guide.html", cat:"Developer Guide", title:"Emaar Properties: Everything You Need to Know Before Buying", date:"May 2026", excerpt:"Emaar is Dubai's most trusted developer. A complete overview of their projects, payment plans, track record and why they consistently top Dubai's off-plan market.", img:"https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80"},
+  {id:4, url:"off-plan-vs-ready-property-dubai.html", cat:"Investment Guide", title:"Off-Plan vs Ready Property in Dubai: Which Is the Better Investment?", date:"April 2026", excerpt:"Should you buy off-plan or a ready property in Dubai? We break down the key differences, risks and returns of each to help you decide.", img:"https://images.unsplash.com/photo-1560184897-ae75f418493e?w=800&q=80"},
+  {id:5, url:"can-foreigners-buy-property-dubai.html", cat:"Legal Guide", title:"Can Foreigners Buy Property in Dubai? A Complete Legal Guide", date:"April 2026", excerpt:"Yes — foreigners can freely buy property in Dubai. Everything you need to know about freehold ownership, the buying process and your legal rights.", img:"https://images.unsplash.com/photo-1582672060674-bc2bd808a8b5?w=800&q=80"},
+  {id:6, url:"dubai-property-market-2026.html", cat:"Market Insight", title:"Dubai Property Market 2026: Key Trends Every Investor Should Know", date:"April 2026", excerpt:"Dubai's property market broke records in 2025 and momentum has continued into 2026. Key trends shaping the market and what they mean for off-plan buyers.", img:"https://images.unsplash.com/photo-1609170611799-7d434a229a22?w=800&q=80"},
+  {id:7, url:"dubai-off-plan-payment-plans-guide.html", cat:"Payment Plans", title:"Understanding Dubai Off-Plan Payment Plans: A Complete Guide", date:"March 2026", excerpt:"From 80/20 to post-handover plans — everything you need to know about how Dubai off-plan payment plans work and which structure suits you.", img:"https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80"},
+  {id:8, url:"jvc-dubai-off-plan-investment-guide.html", cat:"Area Guide", title:"JVC Dubai: Why Jumeirah Village Circle Is the Top Area for Off-Plan Investment", date:"March 2026", excerpt:"JVC consistently delivers the highest rental yields in Dubai. Why Jumeirah Village Circle remains the top destination for off-plan property investors.", img:"https://images.unsplash.com/photo-1575517111839-3a3843ee7f5d?w=800&q=80"},
+  {id:9, url:"uae-golden-visa-property-dubai.html", cat:"Golden Visa", title:"UAE Golden Visa Through Property: Everything You Need to Know", date:"February 2026", excerpt:"Buy property worth AED 2 million or more in Dubai and qualify for the UAE 10-Year Golden Visa. How it works and which off-plan projects qualify.", img:"https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800&q=80"},
+  {id:10, url:"buying-off-plan-property-dubai-foreigners-guide.html", cat:"Buying Guide", title:"Step-by-Step Guide to Buying Off-Plan Property in Dubai as a Foreigner", date:"February 2026", excerpt:"A practical, step-by-step walkthrough of exactly how to buy off-plan property in Dubai — from choosing a project to receiving your title deed.", img:"https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80"}
+];
     title: "What Is Off-Plan Property in Dubai and How Does It Work?",
     date: "May 2026",
     excerpt: "A complete beginner's guide to buying off-plan property in Dubai — from what it means to how the process works step by step.",
@@ -483,7 +491,20 @@ const blogs = [
 function renderBlogGrid() {
   const grid = document.getElementById('blogGrid');
   grid.innerHTML = blogs.map(b => `
-    <a class="blog-card" onclick="openArticle(${b.id}); return false;" href="#">
+    <a class="blog-card" href="${b.url}">
+      <div class="blog-card-img">
+        <img src="${b.img}" alt="${b.title}" loading="lazy">
+        <span class="blog-card-cat">${b.cat}</span>
+      </div>
+      <div class="blog-card-body">
+        <div class="blog-card-date">${b.date}</div>
+        <div class="blog-card-title">${b.title}</div>
+        <div class="blog-card-excerpt">${b.excerpt}</div>
+        <div class="blog-card-read">Read article →</div>
+      </div>
+    </a>
+  `).join('');
+}
       <div class="blog-card-img">
         <img src="${b.img}" alt="${b.title}" loading="lazy">
         <span class="blog-card-cat">${b.cat}</span>
