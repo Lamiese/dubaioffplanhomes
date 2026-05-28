@@ -18,13 +18,21 @@
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{background:var(--black);color:var(--white);font-family:'Montserrat',sans-serif;font-weight:300}
-nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:22px 60px;background:rgba(10,10,10,0.95);border-bottom:1px solid var(--border)}
-.nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:300;letter-spacing:.12em;color:var(--gold);text-decoration:none}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:22px 40px;background:rgba(10,10,10,0.95);border-bottom:1px solid var(--border)}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:300;letter-spacing:.1em;color:var(--gold);text-decoration:none;white-space:nowrap}
 .nav-logo span{color:var(--white)}
-.nav-links{display:flex;gap:36px;list-style:none}
-.nav-links a{text-decoration:none;color:var(--white);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;font-weight:500;transition:color .2s}
+.nav-links{display:flex;gap:24px;list-style:none}
+.nav-links a{text-decoration:none;color:var(--white);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;font-weight:500;transition:color .2s;white-space:nowrap}
 .nav-links a:hover{color:var(--gold)}
-.nav-cta{background:var(--gold);color:var(--black);padding:10px 26px;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;font-weight:600;text-decoration:none}
+.nav-cta{background:var(--gold);color:var(--black);padding:10px 20px;font-size:.65rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;text-decoration:none;white-space:nowrap}
+.nav-cta:hover{background:var(--gold-light)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer}
+.hamburger span{width:24px;height:1px;background:var(--gold)}
+.mobile-menu{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(10,10,10,0.98);z-index:99;flex-direction:column;align-items:center;justify-content:center;gap:32px}
+.mobile-menu.open{display:flex}
+.mobile-menu a{text-decoration:none;color:var(--white);font-size:1.1rem;letter-spacing:.18em;text-transform:uppercase;font-weight:400}
+.mobile-menu a:hover{color:var(--gold)}
+.mobile-menu-close{position:absolute;top:24px;right:28px;background:none;border:none;color:var(--gold);font-size:1.8rem;cursor:pointer}
 
 .blog-hero{padding:140px 60px 80px;background:linear-gradient(to bottom,rgba(10,10,10,0.7),rgba(10,10,10,0.95)),url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1600&q=80') center/cover;text-align:center}
 .blog-hero-tag{font-size:.62rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);border:1px solid var(--border);padding:8px 20px;display:inline-block;margin-bottom:24px}
@@ -48,36 +56,15 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .blog-card-excerpt{font-size:.75rem;line-height:1.8;color:rgba(245,242,236,.6);margin-bottom:16px}
 .blog-card-read{font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
 
-/* ARTICLE */
-.article-section{display:none;padding:120px 0 80px;background:var(--black)}
-.article-section.open{display:block}
-.article-inner{max-width:780px;margin:0 auto;padding:0 40px}
-.article-back{font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);cursor:pointer;border:none;background:none;margin-bottom:40px;display:flex;align-items:center;gap:8px}
-.article-cat{font-size:.6rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
-.article-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3rem);font-weight:300;line-height:1.15;margin-bottom:16px}
-.article-meta{font-size:.65rem;letter-spacing:.12em;color:var(--grey);margin-bottom:40px;padding-bottom:24px;border-bottom:1px solid var(--border)}
-.article-hero-img{width:100%;height:360px;object-fit:cover;margin-bottom:40px}
-.article-body{font-size:.88rem;line-height:2;color:rgba(245,242,236,.8)}
-.article-body h2{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:300;color:var(--white);margin:40px 0 16px}
-.article-body h3{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:400;color:var(--gold);margin:28px 0 12px}
-.article-body p{margin-bottom:20px}
-.article-body ul{margin:16px 0 20px 0;list-style:none}
-.article-body ul li{padding:6px 0 6px 18px;position:relative;border-bottom:1px solid rgba(201,168,76,.08)}
-.article-body ul li::before{content:'◆';position:absolute;left:0;color:var(--gold);font-size:.45rem;top:10px}
-.article-cta{background:var(--gold-dim);border:1px solid var(--border);padding:32px;margin:40px 0;text-align:center}
-.article-cta h3{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:300;margin-bottom:10px}
-.article-cta p{font-size:.78rem;color:rgba(245,242,236,.65);margin-bottom:20px}
-.btn-gold{background:var(--gold);color:var(--black);padding:14px 36px;font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600;text-decoration:none;display:inline-block;border:none;cursor:pointer;font-family:'Montserrat',sans-serif}
-
 footer{background:var(--dark2);border-top:1px solid var(--border);padding:40px 60px;text-align:center;font-size:.65rem;color:var(--grey)}
 footer a{color:var(--gold);text-decoration:none}
 
 @media(max-width:768px){
   nav{padding:16px 20px}
-  .nav-links{display:none}
+  .nav-links,.nav-cta{display:none}
+  .hamburger{display:flex}
   .blog-hero,.blog-grid-section{padding-left:20px;padding-right:20px}
-  .article-inner{padding:0 20px}
-  .article-hero-img{height:220px}
+  .blog-hero{padding-top:110px}
 }
 </style>
 </head>
@@ -92,9 +79,18 @@ footer a{color:var(--gold);text-decoration:none}
     <li><a href="index.html#contact">Contact</a></li>
   </ul>
   <a href="index.html#contact" class="nav-cta">Free Consultation</a>
+  <div class="hamburger" onclick="document.getElementById('mobileMenu').classList.toggle('open')"><span></span><span></span><span></span></div>
 </nav>
 
-<!-- BLOG LIST -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu-close" onclick="document.getElementById('mobileMenu').classList.remove('open')">✕</button>
+  <a href="index.html#properties" onclick="document.getElementById('mobileMenu').classList.remove('open')">Projects</a>
+  <a href="index.html#areas" onclick="document.getElementById('mobileMenu').classList.remove('open')">Areas</a>
+  <a href="blog.html" onclick="document.getElementById('mobileMenu').classList.remove('open')">Blog</a>
+  <a href="index.html#contact" onclick="document.getElementById('mobileMenu').classList.remove('open')">Contact</a>
+  <a href="index.html#contact" onclick="document.getElementById('mobileMenu').classList.remove('open')" style="color:var(--gold);border:1px solid var(--gold);padding:12px 32px;margin-top:10px">Free Consultation</a>
+</div>
+
 <div id="blogList">
   <div class="blog-hero">
     <div class="blog-hero-tag">Insights & Guides</div>
@@ -109,383 +105,23 @@ footer a{color:var(--gold);text-decoration:none}
   </section>
 </div>
 
-<!-- ARTICLE VIEW -->
-<div class="article-section" id="articleView">
-  <div class="article-inner">
-    <button class="article-back" onclick="showBlogList()">← Back to all articles</button>
-    <div class="article-cat" id="artCat"></div>
-    <div class="article-title" id="artTitle"></div>
-    <div class="article-meta" id="artMeta"></div>
-    <img class="article-hero-img" id="artImg" src="" alt="">
-    <div class="article-body" id="artBody"></div>
-    <div class="article-cta">
-      <h3>Ready to Invest in Dubai Off Plan?</h3>
-      <p>Our team offers free, expert guidance on every project — from shortlisting to purchase. Zero commission to you.</p>
-      <a href="index.html#contact" class="btn-gold">Book a Free Consultation</a>
-    </div>
-  </div>
-</div>
-
 <footer>
   <p>© 2026 Dubai Off Plan Homes. All rights reserved. · <a href="index.html">Home</a> · <a href="index.html#contact">Contact</a></p>
 </footer>
 
 <script>
 const blogs = [
-  {id:1, url:"what-is-off-plan-property-dubai.html", cat:"Beginner's Guide", title:"What Is Off-Plan Property in Dubai and How Does It Work?", date:"May 2026", excerpt:"A complete beginner's guide to buying off-plan property in Dubai — from what it means to how the process works step by step.", img:"https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&q=80"},
-  {id:2, url:"best-areas-buy-off-plan-dubai.html", cat:"Investment Guide", title:"The 7 Best Areas to Buy Off-Plan Property in Dubai in 2026", date:"May 2026", excerpt:"From Downtown Dubai to Emaar South — a detailed breakdown of Dubai's top areas for off-plan investment, with price points, yields and growth potential.", img:"https://images.unsplash.com/photo-1518684079-3c830dcef090?w=800&q=80"},
-  {id:3, url:"emaar-properties-dubai-guide.html", cat:"Developer Guide", title:"Emaar Properties: Everything You Need to Know Before Buying", date:"May 2026", excerpt:"Emaar is Dubai's most trusted developer. A complete overview of their projects, payment plans, track record and why they consistently top Dubai's off-plan market.", img:"https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80"},
-  {id:4, url:"off-plan-vs-ready-property-dubai.html", cat:"Investment Guide", title:"Off-Plan vs Ready Property in Dubai: Which Is the Better Investment?", date:"April 2026", excerpt:"Should you buy off-plan or a ready property in Dubai? We break down the key differences, risks and returns of each to help you decide.", img:"https://images.unsplash.com/photo-1560184897-ae75f418493e?w=800&q=80"},
-  {id:5, url:"can-foreigners-buy-property-dubai.html", cat:"Legal Guide", title:"Can Foreigners Buy Property in Dubai? A Complete Legal Guide", date:"April 2026", excerpt:"Yes — foreigners can freely buy property in Dubai. Everything you need to know about freehold ownership, the buying process and your legal rights.", img:"https://images.unsplash.com/photo-1582672060674-bc2bd808a8b5?w=800&q=80"},
-  {id:6, url:"dubai-property-market-2026.html", cat:"Market Insight", title:"Dubai Property Market 2026: Key Trends Every Investor Should Know", date:"April 2026", excerpt:"Dubai's property market broke records in 2025 and momentum has continued into 2026. Key trends shaping the market and what they mean for off-plan buyers.", img:"https://images.unsplash.com/photo-1609170611799-7d434a229a22?w=800&q=80"},
-  {id:7, url:"dubai-off-plan-payment-plans-guide.html", cat:"Payment Plans", title:"Understanding Dubai Off-Plan Payment Plans: A Complete Guide", date:"March 2026", excerpt:"From 80/20 to post-handover plans — everything you need to know about how Dubai off-plan payment plans work and which structure suits you.", img:"https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80"},
-  {id:8, url:"jvc-dubai-off-plan-investment-guide.html", cat:"Area Guide", title:"JVC Dubai: Why Jumeirah Village Circle Is the Top Area for Off-Plan Investment", date:"March 2026", excerpt:"JVC consistently delivers the highest rental yields in Dubai. Why Jumeirah Village Circle remains the top destination for off-plan property investors.", img:"https://images.unsplash.com/photo-1575517111839-3a3843ee7f5d?w=800&q=80"},
-  {id:9, url:"uae-golden-visa-property-dubai.html", cat:"Golden Visa", title:"UAE Golden Visa Through Property: Everything You Need to Know", date:"February 2026", excerpt:"Buy property worth AED 2 million or more in Dubai and qualify for the UAE 10-Year Golden Visa. How it works and which off-plan projects qualify.", img:"https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800&q=80"},
-  {id:10, url:"buying-off-plan-property-dubai-foreigners-guide.html", cat:"Buying Guide", title:"Step-by-Step Guide to Buying Off-Plan Property in Dubai as a Foreigner", date:"February 2026", excerpt:"A practical, step-by-step walkthrough of exactly how to buy off-plan property in Dubai — from choosing a project to receiving your title deed.", img:"https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80"}
-];
-    title: "What Is Off-Plan Property in Dubai and How Does It Work?",
-    date: "May 2026",
-    excerpt: "A complete beginner's guide to buying off-plan property in Dubai — from what it means to how the process works step by step.",
-    img: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&q=80",
-    body: `
-      <p>Buying off-plan property in Dubai means purchasing a home directly from a developer before — or during — construction. Rather than buying a finished property, you secure a unit based on architectural plans, rendered visuals and a developer's track record. In return for committing early, buyers typically access lower prices, flexible payment plans and strong potential for capital appreciation by the time the property is completed.</p>
-
-      <h2>How the process works</h2>
-      <p>The off-plan buying process in Dubai is straightforward and well-regulated. Here is what typically happens from start to finish:</p>
-      <ul>
-        <li>You choose a project and unit type that suits your budget and goals</li>
-        <li>You pay a reservation deposit — usually 5% to 10% of the purchase price</li>
-        <li>A Sales and Purchase Agreement (SPA) is signed with the developer</li>
-        <li>Instalments are paid at set milestones tied to construction progress</li>
-        <li>The remaining balance (typically 20% to 40%) is paid on handover</li>
-        <li>You receive your keys and title deed registered with Dubai Land Department</li>
-      </ul>
-
-      <h2>Why buyers choose off-plan over ready properties</h2>
-      <p>Off-plan property in Dubai offers several advantages that ready-built homes simply cannot match. Prices are lower at launch — sometimes 20% to 30% below the expected market value on completion. Payment plans spread across years make large investments manageable. And because Dubai's property market has historically appreciated strongly, buyers who commit early often see significant gains before they even move in.</p>
-
-      <h2>Is off-plan buying safe in Dubai?</h2>
-      <p>Dubai is one of the most regulated off-plan markets in the world. The Real Estate Regulatory Authority (RERA) requires all developers to hold buyer funds in escrow accounts — meaning your money is protected and can only be released to the developer at verified construction milestones. This system, introduced after earlier market challenges, has made Dubai's off-plan market one of the most secure anywhere globally.</p>
-
-      <h2>Who can buy off-plan property in Dubai?</h2>
-      <p>Any nationality can purchase off-plan property in Dubai's designated freehold zones, which include the vast majority of major communities — Downtown Dubai, Dubai Marina, Palm Jumeirah, Dubai Hills Estate, JVC, Business Bay, Dubai Creek Harbour and many more. There are no restrictions based on nationality or residency status.</p>
-
-      <h2>What does a typical payment plan look like?</h2>
-      <p>Payment plans vary by developer and project, but a common structure is 80/20 — meaning 80% is paid during construction at set milestones, and 20% is due on handover. Some developers offer post-handover payment plans, allowing buyers to continue paying even after they receive the keys. This makes off-plan even more accessible to international investors.</p>
-
-      <h3>Summary</h3>
-      <p>Off-plan property in Dubai offers an accessible, well-protected route into one of the world's most dynamic real estate markets. With low entry deposits, flexible payment structures, strong capital appreciation potential and full regulatory oversight, it remains one of the most compelling property investment opportunities available globally in 2026.</p>
-    `
-  },
-  {
-    id: 2,
-    cat: "Investment Guide",
-    title: "The 7 Best Areas to Buy Off-Plan Property in Dubai in 2026",
-    date: "May 2026",
-    excerpt: "From Downtown Dubai to Emaar South — a detailed breakdown of Dubai's top areas for off-plan investment, with price points, yields and growth potential.",
-    img: "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=800&q=80",
-    body: `
-      <p>Choosing the right area is one of the most important decisions when buying off-plan property in Dubai. Different communities offer very different price points, rental yields, lifestyle appeal and capital appreciation potential. Here is a detailed guide to the seven best areas for off-plan investment in Dubai in 2026.</p>
-
-      <h2>1. Downtown Dubai</h2>
-      <p>Home to the Burj Khalifa, Dubai Mall and the Dubai Fountain, Downtown Dubai is the city's most iconic address. Off-plan prices start from around AED 2.5 million for apartments, with strong rental yields of 6% to 7% and near-guaranteed demand from both tenants and future buyers. Limited land supply keeps values firm and growing.</p>
-
-      <h2>2. Dubai Marina</h2>
-      <p>One of Dubai's most established waterfront communities, Dubai Marina remains one of the strongest off-plan markets in the city. With metro access, a vibrant promenade and proximity to JBR beach, it appeals to both residents and investors. Entry prices start from around AED 1.5 million for off-plan apartments.</p>
-
-      <h2>3. Dubai Hills Estate</h2>
-      <p>Emaar's flagship masterplanned community offers a blend of green spaces, a championship golf course, excellent schools and a large lifestyle mall. Dubai Hills has become a top choice for families, with strong rental demand and off-plan entry prices from AED 900,000 for apartments.</p>
-
-      <h2>4. Emaar South</h2>
-      <p>One of Dubai's fastest-growing districts, Emaar South is positioned near Al Maktoum International Airport and Expo City. With exceptional connectivity, a golf course community feel and some of Dubai's most competitively priced off-plan launches — starting from AED 700,000 — it offers among the strongest value propositions in 2026.</p>
-
-      <h2>5. Jumeirah Village Circle (JVC)</h2>
-      <p>JVC consistently tops rental yield tables in Dubai, often delivering 7% to 9% net returns. Its central location, family-friendly atmosphere and competitive pricing from around AED 550,000 for studios make it the most popular area for buy-to-let investors in Dubai's off-plan market.</p>
-
-      <h2>6. Dubai Creek Harbour</h2>
-      <p>Emaar's ambitious waterfront development on Dubai Creek is home to the planned Dubai Creek Tower, set to surpass the Burj Khalifa. With stunning views, a marina and proximity to the airport, Creek Harbour offers excellent long-term appreciation prospects. Off-plan prices start from AED 1.2 million.</p>
-
-      <h2>7. Rashid Yachts and Marina</h2>
-      <p>The reimagined Mina Rashid waterfront district has emerged as one of Dubai's most compelling new off-plan destinations. With a 430-berth superyacht marina, Dubai's longest canal pool and Emaar as the master developer, it combines exclusivity with strong long-term value. Entry prices start from AED 2.2 million.</p>
-
-      <h3>Which area is right for you?</h3>
-      <p>The best area depends entirely on your goals. If rental yield is the priority, JVC or Emaar South offer the strongest returns. For capital appreciation and prestige, Downtown Dubai and the Marina waterfront communities deliver. For family living, Dubai Hills Estate and Emaar South are consistently top rated. Our team can advise you on the right fit for your budget and investment strategy — completely free of charge.</p>
-    `
-  },
-  {
-    id: 3,
-    cat: "Developer Guide",
-    title: "Emaar Properties: Everything You Need to Know Before Buying",
-    date: "May 2026",
-    excerpt: "Emaar is Dubai's most trusted developer. Here is a complete overview of their projects, payment plans, track record and why they consistently top Dubai's off-plan market.",
-    img: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80",
-    body: `
-      <p>Emaar Properties is the most recognised real estate developer in Dubai and one of the largest in the world. Founded in 1997, Emaar has shaped Dubai's skyline more than any other company — delivering the Burj Khalifa, Downtown Dubai, Dubai Marina, Dubai Hills Estate, Dubai Creek Harbour and dozens of other landmark developments. For off-plan buyers in Dubai, Emaar is often the first name they encounter — and for very good reason.</p>
-
-      <h2>Emaar's track record</h2>
-      <p>Emaar has a consistent and proven track record of delivering projects on time and to a very high standard. Listed on the Dubai Financial Market with a market capitalisation exceeding USD 20 billion, the company reported record property sales of AED 80.4 billion in 2025. That level of financial strength gives buyers in Emaar projects exceptional security — the developer has the resources to complete every project it launches, regardless of market conditions.</p>
-
-      <h2>Emaar's key communities in Dubai</h2>
-      <ul>
-        <li>Downtown Dubai — home to the Burj Khalifa and Dubai Mall</li>
-        <li>Dubai Marina — one of the world's largest marina developments</li>
-        <li>Dubai Hills Estate — a masterplanned golf and lifestyle community</li>
-        <li>Emaar South — a fast-growing community near Al Maktoum Airport</li>
-        <li>Dubai Creek Harbour — a landmark waterfront district in development</li>
-        <li>Rashid Yachts and Marina — a luxury superyacht marina community</li>
-        <li>Emaar Beachfront — a private beach island between JBR and Palm Jumeirah</li>
-      </ul>
-
-      <h2>Typical Emaar payment plans</h2>
-      <p>Emaar typically offers an 80/20 payment structure — 80% paid during construction across several milestones, and 20% on handover. Booking deposits are usually 10% of the purchase price. This structure is consistent across most Emaar launches and is one of the most buyer-friendly in the market.</p>
-
-      <h2>Emaar quality and finishing standards</h2>
-      <p>Emaar properties are known for high-quality finishes, well-thought-out layouts and strong build quality. Their developments consistently outperform the wider market on resale values and rental returns, reflecting the premium that the Emaar brand commands in Dubai's property market.</p>
-
-      <h2>Should you buy an Emaar off-plan property?</h2>
-      <p>For buyers seeking security, quality and strong long-term value, Emaar is an excellent choice. Their combination of financial strength, proven delivery, premium communities and consistent demand from both residents and investors makes Emaar one of the safest and most rewarding off-plan investments available in Dubai today.</p>
-    `
-  },
-  {
-    id: 4,
-    cat: "Investment Guide",
-    title: "Off-Plan vs Ready Property in Dubai: Which Is the Better Investment?",
-    date: "April 2026",
-    excerpt: "Should you buy off-plan or a ready property in Dubai? We break down the key differences, risks and returns of each to help you decide.",
-    img: "https://images.unsplash.com/photo-1560184897-ae75f418493e?w=800&q=80",
-    body: `
-      <p>One of the most common questions from buyers entering Dubai's property market is whether to purchase off-plan or a ready (completed) property. Both have their merits, and the right choice depends entirely on your goals, timeline and financial situation. Here is a clear breakdown of the key differences.</p>
-
-      <h2>Price and entry point</h2>
-      <p>Off-plan properties are almost always cheaper than equivalent ready properties in the same community. Developers price off-plan launches at a discount to incentivise early commitment, meaning buyers who secure units at launch often see significant capital appreciation by the time the project completes. Ready properties are priced at current market value with no discount.</p>
-
-      <h2>Payment structure</h2>
-      <p>Off-plan properties offer structured payment plans spread across construction — typically requiring just 10% to secure a unit and the remainder in instalments over two to four years. Ready properties require either full payment or a mortgage, which demands a larger immediate capital outlay.</p>
-
-      <h2>Rental income</h2>
-      <p>Ready properties generate immediate rental income from day one. Off-plan properties do not produce any income during the construction period, which can be a drawback for investors focused on cash flow. However, by handover, the property value — and therefore potential rental income — may be considerably higher than at purchase.</p>
-
-      <h2>Risk</h2>
-      <p>Ready properties carry essentially no construction risk — you can inspect the unit before buying. Off-plan properties carry a degree of construction risk, though Dubai's RERA escrow system mitigates this significantly by protecting buyer funds until verified construction milestones are met. Choosing a proven developer like Emaar, Damac or Binghatti further reduces this risk.</p>
-
-      <h2>Capital appreciation potential</h2>
-      <p>Off-plan properties generally offer stronger capital appreciation potential. Buyers who secure units at launch prices benefit from market appreciation during the construction period, and strong areas have historically delivered 20% to 40% gains from purchase to handover. Ready properties appreciate more gradually with the market.</p>
-
-      <h2>Which is right for you?</h2>
-      <p>If you need immediate rental income and want to avoid construction risk, a ready property may suit you better. If you have a longer investment horizon and want to maximise capital growth with a lower initial outlay, off-plan is typically the stronger choice in Dubai's market. For most international investors, off-plan offers the most compelling combination of accessibility and returns.</p>
-    `
-  },
-  {
-    id: 5,
-    cat: "Legal Guide",
-    title: "Can Foreigners Buy Property in Dubai? A Complete Legal Guide",
-    date: "April 2026",
-    excerpt: "Yes — foreigners can freely buy property in Dubai. Here is everything you need to know about freehold ownership, the buying process and your legal rights as a non-UAE national.",
-    img: "https://images.unsplash.com/photo-1582672060674-bc2bd808a8b5?w=800&q=80",
-    body: `
-      <p>Yes — foreigners can absolutely buy property in Dubai, and they do so in enormous numbers. Dubai has one of the most open and internationally accessible real estate markets in the world. Here is a complete guide to the legal framework, your rights as a foreign buyer and how the process works.</p>
-
-      <h2>Freehold ownership for foreigners</h2>
-      <p>Since 2002, non-UAE nationals have been permitted to purchase property in designated freehold areas of Dubai. Freehold ownership means you own the property outright — including the land it sits on — with full rights to sell, lease, mortgage or inherit the asset. This is the same ownership structure as in the UK, US or Europe.</p>
-
-      <h2>Which areas can foreigners buy in?</h2>
-      <p>Foreigners can purchase property in Dubai's designated freehold zones. These cover the vast majority of the city's most desirable communities, including:</p>
-      <ul>
-        <li>Downtown Dubai</li>
-        <li>Dubai Marina</li>
-        <li>Palm Jumeirah</li>
-        <li>Dubai Hills Estate</li>
-        <li>Business Bay</li>
-        <li>JVC (Jumeirah Village Circle)</li>
-        <li>Dubai Creek Harbour</li>
-        <li>Emaar South and Emaar Beachfront</li>
-        <li>Arjan and Al Barsha South</li>
-        <li>Dubailand and many more</li>
-      </ul>
-
-      <h2>The UAE Golden Visa</h2>
-      <p>Property buyers in Dubai may qualify for the UAE 10-Year Golden Visa. Purchasing a property worth AED 2 million or more grants eligibility for a long-term residency visa, allowing you to live, work and study in the UAE without needing a local sponsor. Many off-plan properties in Dubai — including several featured on this site — qualify from launch prices.</p>
-
-      <h2>Dubai Land Department and title deeds</h2>
-      <p>All property transactions in Dubai must be registered with the Dubai Land Department (DLD). Upon completing an off-plan purchase, your ownership is registered in the DLD's system. On handover, you receive a title deed — your formal proof of ownership — registered in your name with the full weight of UAE law behind it.</p>
-
-      <h2>Taxes on Dubai property</h2>
-      <p>Dubai is highly tax-efficient for property investors. There is no income tax on rental income, no capital gains tax on property sales and no inheritance tax. The only transaction costs are a 4% DLD registration fee (usually paid on purchase) and a 2% agency fee if using a registered agent. This tax environment makes Dubai one of the most financially attractive property markets in the world for international investors.</p>
-
-      <h2>Is my investment legally protected?</h2>
-      <p>Yes. RERA's escrow system means your off-plan payments are held in a protected account and released to developers only at verified construction milestones. Dubai's legal system provides strong protections for all property buyers regardless of nationality. The market is transparent, regulated and internationally recognised as one of the most secure in the world.</p>
-    `
-  },
-  {
-    id: 6,
-    cat: "Market Insight",
-    title: "Dubai Property Market 2026: Key Trends Every Investor Should Know",
-    date: "April 2026",
-    excerpt: "Dubai's property market broke records in 2025 and momentum has continued into 2026. Here are the key trends shaping the market and what they mean for off-plan buyers.",
-    img: "https://images.unsplash.com/photo-1609170611799-7d434a229a22?w=800&q=80",
-    body: `
-      <p>Dubai's real estate market has entered 2026 on the back of extraordinary momentum. With AED 624.1 billion in transactions recorded in 2025 and population growth exceeding 1,000 new residents per day, the fundamentals driving Dubai's property market remain as strong as ever. Here are the key trends every off-plan investor should understand.</p>
-
-      <h2>Record transaction volumes</h2>
-      <p>Dubai recorded its highest-ever property transaction values in 2025, breaking previous records for both volume and total value. Off-plan transactions accounted for a significant majority of activity, reflecting the continued strength of developer launches and buyer appetite for new-build properties.</p>
-
-      <h2>Population growth driving demand</h2>
-      <p>Dubai's population continues to grow rapidly, driven by international business relocation, Golden Visa uptake and the city's continued rise as a global hub for finance, technology and lifestyle. With over 1,000 net new residents arriving daily, demand for quality housing consistently outpaces supply — a structural driver of price growth.</p>
-
-      <h2>Global investors entering the market</h2>
-      <p>Buyers from Europe, the UK, Russia, India and China have been particularly active in Dubai's off-plan market. The combination of zero income tax, zero capital gains tax, strong yields and the UAE Golden Visa has made Dubai one of the top destinations for high-net-worth property investment globally. This international demand adds liquidity and depth to the market.</p>
-
-      <h2>Waterfront and branded developments leading</h2>
-      <p>The strongest price growth in 2025 and early 2026 has been concentrated in waterfront communities and branded residence projects. Developments like Amali Residences on the Dubai Water Canal, Fior at Rashid Yachts and Marina, and branded projects on Yas Island have attracted premium pricing and strong demand from sophisticated investors.</p>
-
-      <h2>Off-plan launches at a premium to ready stock</h2>
-      <p>A notable shift in 2026 is that many new off-plan launches are pricing at or above equivalent ready properties in the same community — a reversal of the traditional relationship. This reflects strong confidence in Dubai's market direction and the premium that quality new-build specifications now command over older stock.</p>
-
-      <h2>What this means for off-plan buyers</h2>
-      <p>The window for buying at traditionally discounted off-plan prices is narrowing as the market matures. Buyers who act early on quality new launches — particularly in fast-growing corridors like Emaar South, Dubai South and emerging waterfront districts — are likely to benefit most from the continued strength of Dubai's property market through to 2030 and beyond.</p>
-    `
-  },
-  {
-    id: 7,
-    cat: "Payment Plans",
-    title: "Understanding Dubai Off-Plan Payment Plans: A Complete Guide",
-    date: "March 2026",
-    excerpt: "From 80/20 to post-handover plans — everything you need to know about how Dubai off-plan payment plans work and which structure suits you.",
-    img: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80",
-    body: `
-      <p>One of the most attractive features of buying off-plan property in Dubai is the flexible payment plan structure that most developers offer. Rather than paying the full purchase price upfront, buyers pay in instalments tied to construction milestones over the course of the development period. Understanding how these plans work is essential before committing to any off-plan purchase.</p>
-
-      <h2>The standard 80/20 payment plan</h2>
-      <p>The most common structure in Dubai's off-plan market is the 80/20 plan. Under this arrangement, buyers pay 80% of the purchase price during construction — split across set milestones — and the remaining 20% on handover when keys are received. The initial booking deposit is typically 10% of the purchase price.</p>
-
-      <h2>The 60/40 payment plan</h2>
-      <p>Some developers, particularly for luxury projects, offer a 60/40 structure. Buyers pay 60% during construction and 40% on completion. This reduces the financial commitment during the build phase, making it particularly appealing for investors who prefer to preserve liquidity.</p>
-
-      <h2>Post-handover payment plans</h2>
-      <p>Some developers offer post-handover plans, where a portion of the purchase price — typically 30% to 40% — is paid after the property is handed over, spread across one to three years. This structure allows buyers to begin generating rental income before the full purchase price is settled, and is particularly popular with investors.</p>
-
-      <h2>Construction-linked milestone payments</h2>
-      <p>Regardless of the overall plan structure, instalments during construction are triggered by verified construction milestones rather than fixed dates. For example, a typical 80/20 plan might require payment at: booking (10%), foundation completion (10%), structure completion (10%), cladding completion (10%), fit-out completion (10%), and handover (20%). This milestone-linked approach ensures buyers are only releasing funds when actual construction progress has been verified.</p>
-
-      <h2>Low deposit entry points</h2>
-      <p>Some developers, particularly for new project launches, offer booking deposits as low as 5% of the purchase price. This means buyers can secure a unit in a premium Dubai development with a very modest initial outlay — for example, securing a AED 1.5 million apartment for as little as AED 75,000 upfront.</p>
-
-      <h2>Comparing payment plans before you buy</h2>
-      <p>Not all payment plans are equal, and the right structure depends on your financial situation and investment strategy. Our team can help you compare plans across different developers and projects to find the best fit for your goals — completely free of charge.</p>
-    `
-  },
-  {
-    id: 8,
-    cat: "Area Guide",
-    title: "JVC Dubai: Why Jumeirah Village Circle Is the Top Area for Off-Plan Investment",
-    date: "March 2026",
-    excerpt: "JVC consistently delivers the highest rental yields in Dubai. Here is why Jumeirah Village Circle remains the top destination for off-plan property investors.",
-    img: "https://images.unsplash.com/photo-1575517111839-3a3843ee7f5d?w=800&q=80",
-    body: `
-      <p>Jumeirah Village Circle — known as JVC — has established itself as Dubai's most popular area for off-plan property investment among yield-focused buyers. Consistently topping rental return tables with net yields of 7% to 9%, JVC offers a combination of affordability, central location and strong tenant demand that is hard to match anywhere else in the city.</p>
-
-      <h2>Where is JVC?</h2>
-      <p>JVC is a circular, family-friendly community located in the heart of Dubai, roughly equidistant from Dubai Marina, Downtown Dubai and Dubai Hills Estate. Its central position gives residents and tenants fast access to the city's main employment and leisure hubs, a key driver of its strong rental demand.</p>
-
-      <h2>Off-plan prices in JVC</h2>
-      <p>JVC offers some of Dubai's most competitive entry prices for off-plan property. Studios start from around AED 450,000, one-bedroom apartments from AED 650,000 and two-bedroom units from AED 950,000. This accessibility makes JVC popular with both first-time buyers in Dubai and experienced investors building portfolios.</p>
-
-      <h2>Rental yields in JVC</h2>
-      <p>Net rental yields in JVC typically range from 7% to 9% — significantly above the Dubai average of around 5% to 6%. The combination of strong tenant demand from young professionals and families, manageable service charges and competitive property prices creates the conditions for exceptional yield performance.</p>
-
-      <h2>Community amenities</h2>
-      <p>JVC has matured significantly over the past five years. The community now offers Circle Mall, multiple parks, schools, fitness centres, restaurants and supermarkets — all within walking distance for most residents. This improving infrastructure continues to drive both tenant demand and long-term price appreciation.</p>
-
-      <h2>Off-plan launches in JVC</h2>
-      <p>JVC remains one of the most active areas for new off-plan launches in Dubai. Multiple developers — including Ellington, Binghatti and a range of boutique developers — regularly launch new projects in the community. Early investors in JVC launches have consistently seen strong appreciation from purchase to handover.</p>
-
-      <h2>Is JVC a good investment in 2026?</h2>
-      <p>Yes — JVC's fundamentals remain very strong in 2026. Rising rental rates, sustained tenant demand, competitive purchase prices and continued infrastructure improvement all point to continued strong performance. For investors seeking the best combination of yield and affordability in Dubai, JVC remains a top recommendation.</p>
-    `
-  },
-  {
-    id: 9,
-    cat: "Golden Visa",
-    title: "UAE Golden Visa Through Property: Everything You Need to Know",
-    date: "February 2026",
-    excerpt: "Buy property worth AED 2 million or more in Dubai and qualify for the UAE 10-Year Golden Visa. Here is how it works and which off-plan projects qualify.",
-    img: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800&q=80",
-    body: `
-      <p>The UAE's 10-Year Golden Visa has become one of the most compelling additional benefits of buying property in Dubai. Since its introduction, it has significantly increased the attractiveness of UAE real estate for international buyers — offering long-term residency in one of the world's most desirable destinations as a direct result of a qualifying property investment.</p>
-
-      <h2>What is the UAE Golden Visa?</h2>
-      <p>The UAE Golden Visa is a long-term residency visa that allows holders to live, work and study in the UAE for a renewable 10-year period without needing a local employer or sponsor. It can also be extended to include immediate family members — spouse and children — making it particularly valuable for buyers relocating or planning future relocation to the UAE.</p>
-
-      <h2>How do you qualify through property?</h2>
-      <p>To qualify for the UAE Golden Visa through real estate investment, you must purchase property with a minimum value of AED 2 million. The property can be off-plan or ready, and can be purchased with a mortgage — provided the equity portion owned outright meets the AED 2 million threshold.</p>
-
-      <h2>Which off-plan projects in Dubai qualify?</h2>
-      <p>Several of the off-plan projects featured on this site qualify for Golden Visa eligibility from launch prices:</p>
-      <ul>
-        <li>Amali Residences — from AED 10 million (all units qualify)</li>
-        <li>Tilal Binghatti — from AED 3 million (all units qualify)</li>
-        <li>Fior at Rashid Yachts and Marina — select units from AED 2.21 million qualify</li>
-        <li>Manchester City Yas Residences — from AED 2 million (selected units qualify)</li>
-      </ul>
-
-      <h2>Benefits of the UAE Golden Visa</h2>
-      <ul>
-        <li>10 years renewable residency — no annual renewals or employer dependency</li>
-        <li>Family sponsorship — spouse, children and parents can be included</li>
-        <li>Freedom to live, work and study in the UAE</li>
-        <li>No minimum days required in the UAE to maintain the visa</li>
-        <li>Access to UAE banking, education and healthcare as a resident</li>
-        <li>The visa does not affect your existing nationality or passport</li>
-      </ul>
-
-      <h2>How long does it take to get a Golden Visa through property?</h2>
-      <p>For ready properties, the Golden Visa application can typically be completed within four to eight weeks of purchase registration. For off-plan properties, the visa can be applied for once the property is registered with the Dubai Land Department — which can happen from the point of purchase on some projects, or on handover for others.</p>
-
-      <h2>Is the Golden Visa worth it?</h2>
-      <p>For most international investors buying at the AED 2 million threshold, the Golden Visa represents exceptional additional value from what would already be a strong property investment. The ability to reside in the UAE long-term — in a zero-income-tax, world-class lifestyle destination — makes the combination of investment and residency uniquely compelling.</p>
-    `
-  },
-  {
-    id: 10,
-    cat: "Buying Guide",
-    title: "Step-by-Step Guide to Buying Off-Plan Property in Dubai as a Foreigner",
-    date: "February 2026",
-    excerpt: "A practical, step-by-step walkthrough of exactly how to buy off-plan property in Dubai — from choosing a project to receiving your title deed.",
-    img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80",
-    body: `
-      <p>Buying off-plan property in Dubai as a foreign national is a straightforward process — far simpler than purchasing property in many Western markets. The legal framework is clear, the regulatory protections are strong and the transaction costs are transparent. Here is a practical step-by-step guide to exactly how it works.</p>
-
-      <h2>Step 1: Define your goals and budget</h2>
-      <p>Before looking at specific projects, be clear on what you want to achieve. Are you buying for rental income, capital appreciation, personal use or a combination? What is your total budget, including the purchase price and transaction costs? What payment plan structure suits your cash flow? Having clear answers to these questions will significantly narrow your search.</p>
-
-      <h2>Step 2: Choose the right area and project</h2>
-      <p>Different areas deliver very different outcomes. JVC and Emaar South offer the best rental yields. Downtown Dubai and the Marina waterfront offer prestige and strong capital appreciation. Dubai Hills Estate suits families. Use this analysis to narrow down the area that matches your goals, then look at specific off-plan launches within that area.</p>
-
-      <h2>Step 3: Work with a registered specialist</h2>
-      <p>A good property consultant in Dubai — like our team — has access to the full range of off-plan launches, often including pre-launch allocations not yet available to the public. We can shortlist projects, arrange viewings of show units and advise on payment plans and investment potential. Our service is completely free to buyers.</p>
-
-      <h2>Step 4: Reserve your unit</h2>
-      <p>Once you have chosen a project and unit, you pay a reservation deposit — typically 5% to 10% of the purchase price. This is usually paid by bank transfer directly to the developer's RERA-regulated escrow account. You receive a receipt and a reservation agreement confirming your unit.</p>
-
-      <h2>Step 5: Sign the Sales and Purchase Agreement</h2>
-      <p>Within 30 days of reservation, the developer issues a formal Sales and Purchase Agreement (SPA) for you to sign. This document sets out the full purchase price, payment schedule, completion date and handover conditions. Read it carefully before signing — your consultant can help you review it.</p>
-
-      <h2>Step 6: Pay instalments as construction progresses</h2>
-      <p>From this point, you pay instalments according to the agreed payment plan, triggered by verified construction milestones. The developer sends reminders before each payment is due, and all funds go to the regulated escrow account.</p>
-
-      <h2>Step 7: Snag the property before handover</h2>
-      <p>When the project is near completion, the developer notifies you for a snagging inspection — a walkthrough of your completed unit to identify any defects or issues. Any items flagged must be rectified before handover. Take this process seriously and document everything.</p>
-
-      <h2>Step 8: Pay the final instalment and receive your keys</h2>
-      <p>Once you are satisfied with the snagging outcome, you pay the final handover instalment and receive your keys. The developer simultaneously registers the title deed in your name with the Dubai Land Department.</p>
-
-      <h2>Step 9: Receive your title deed</h2>
-      <p>Your title deed is issued by the Dubai Land Department and is your formal legal proof of ownership. It confirms your name, the property details and that the transaction has been registered with the UAE government. You are now the full freehold owner of the property.</p>
-
-      <h3>What are the total transaction costs?</h3>
-      <p>The main additional cost beyond the purchase price is the 4% Dubai Land Department registration fee. There are no other significant taxes. Agency fees, if applicable, are typically 2% — but if you work with a registered specialist like our team, we are paid by the developer and our service to you is entirely free.</p>
-    `
-  }
+  {url:"dubai-property-iran-war-invest-2026.html", cat:"Market Insight", title:"Dubai Property and the Iran War: Should You Still Invest in 2026?", date:"May 2026", excerpt:"With tensions rising, many investors are asking whether Dubai property is still a safe bet. Here is what history and the data actually tell us.", img:"https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&q=80"},
+  {url:"what-is-off-plan-property-dubai.html", cat:"Beginner's Guide", title:"What Is Off-Plan Property in Dubai and How Does It Work?", date:"May 2026", excerpt:"A complete beginner's guide to buying off-plan property in Dubai — from what it means to how the process works step by step.", img:"https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&q=80"},
+  {url:"best-areas-buy-off-plan-dubai.html", cat:"Investment Guide", title:"The 7 Best Areas to Buy Off-Plan Property in Dubai in 2026", date:"May 2026", excerpt:"From Downtown Dubai to Emaar South — a detailed breakdown of Dubai's top areas for off-plan investment, with price points, yields and growth potential.", img:"https://images.unsplash.com/photo-1518684079-3c830dcef090?w=800&q=80"},
+  {url:"emaar-properties-dubai-guide.html", cat:"Developer Guide", title:"Emaar Properties: Everything You Need to Know Before Buying", date:"May 2026", excerpt:"Emaar is Dubai's most trusted developer. A complete overview of their projects, payment plans, track record and why they consistently top Dubai's off-plan market.", img:"https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80"},
+  {url:"off-plan-vs-ready-property-dubai.html", cat:"Investment Guide", title:"Off-Plan vs Ready Property in Dubai: Which Is the Better Investment?", date:"April 2026", excerpt:"Should you buy off-plan or a ready property in Dubai? We break down the key differences, risks and returns of each to help you decide.", img:"https://images.unsplash.com/photo-1560184897-ae75f418493e?w=800&q=80"},
+  {url:"can-foreigners-buy-property-dubai.html", cat:"Legal Guide", title:"Can Foreigners Buy Property in Dubai? A Complete Legal Guide", date:"April 2026", excerpt:"Yes — foreigners can freely buy property in Dubai. Everything you need to know about freehold ownership, the buying process and your legal rights.", img:"https://images.unsplash.com/photo-1582672060674-bc2bd808a8b5?w=800&q=80"},
+  {url:"dubai-property-market-2026.html", cat:"Market Insight", title:"Dubai Property Market 2026: Key Trends Every Investor Should Know", date:"April 2026", excerpt:"Dubai's property market broke records in 2025 and momentum has continued into 2026. Key trends shaping the market and what they mean for off-plan buyers.", img:"https://images.unsplash.com/photo-1609170611799-7d434a229a22?w=800&q=80"},
+  {url:"dubai-off-plan-payment-plans-guide.html", cat:"Payment Plans", title:"Understanding Dubai Off-Plan Payment Plans: A Complete Guide", date:"March 2026", excerpt:"From 80/20 to post-handover plans — everything you need to know about how Dubai off-plan payment plans work and which structure suits you.", img:"https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80"},
+  {url:"jvc-dubai-off-plan-investment-guide.html", cat:"Area Guide", title:"JVC Dubai: Why Jumeirah Village Circle Is the Top Area for Off-Plan Investment", date:"March 2026", excerpt:"JVC consistently delivers the highest rental yields in Dubai. Why Jumeirah Village Circle remains the top destination for off-plan property investors.", img:"https://images.unsplash.com/photo-1575517111839-3a3843ee7f5d?w=800&q=80"},
+  {url:"uae-golden-visa-property-dubai.html", cat:"Golden Visa", title:"UAE Golden Visa Through Property: Everything You Need to Know", date:"February 2026", excerpt:"Buy property worth AED 2 million or more in Dubai and qualify for the UAE 10-Year Golden Visa. How it works and which off-plan projects qualify.", img:"https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800&q=80"},
+  {url:"buying-off-plan-property-dubai-foreigners-guide.html", cat:"Buying Guide", title:"Step-by-Step Guide to Buying Off-Plan Property in Dubai as a Foreigner", date:"February 2026", excerpt:"A practical, step-by-step walkthrough of exactly how to buy off-plan property in Dubai — from choosing a project to receiving your title deed.", img:"https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80"}
 ];
 
 function renderBlogGrid() {
@@ -504,40 +140,6 @@ function renderBlogGrid() {
       </div>
     </a>
   `).join('');
-}
-      <div class="blog-card-img">
-        <img src="${b.img}" alt="${b.title}" loading="lazy">
-        <span class="blog-card-cat">${b.cat}</span>
-      </div>
-      <div class="blog-card-body">
-        <div class="blog-card-date">${b.date}</div>
-        <div class="blog-card-title">${b.title}</div>
-        <div class="blog-card-excerpt">${b.excerpt}</div>
-        <div class="blog-card-read">Read article →</div>
-      </div>
-    </a>
-  `).join('');
-}
-
-function openArticle(id) {
-  const b = blogs.find(x => x.id === id);
-  if (!b) return;
-  document.getElementById('artCat').textContent = b.cat;
-  document.getElementById('artTitle').textContent = b.title;
-  document.getElementById('artMeta').textContent = b.date + ' · Dubai Off Plan Homes';
-  document.getElementById('artImg').src = b.img;
-  document.getElementById('artImg').alt = b.title;
-  document.getElementById('artBody').innerHTML = b.body;
-  document.getElementById('blogList').style.display = 'none';
-  const av = document.getElementById('articleView');
-  av.classList.add('open');
-  window.scrollTo(0, 0);
-}
-
-function showBlogList() {
-  document.getElementById('blogList').style.display = 'block';
-  document.getElementById('articleView').classList.remove('open');
-  window.scrollTo(0, 0);
 }
 
 renderBlogGrid();
