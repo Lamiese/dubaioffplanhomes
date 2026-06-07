@@ -387,6 +387,57 @@ footer{background:var(--dark2);border-top:1px solid var(--border);padding:60px 6
       </div>
     </div>
 
+    <div class="property-card" onclick="openProject(6)">
+      <div class="card-img">
+        <img src="https://lamiese.github.io/dubaioffplanhomes/palm-central-1.png" alt="Palm Central Private Residences Palm Jebel Ali" loading="lazy">
+        <span class="card-badge">Beachfront</span>
+      </div>
+      <div class="card-body">
+        <div class="card-community">Palm Jebel Ali, Dubai</div>
+        <div class="card-title">Palm Central Private Residences by Nakheel</div>
+        <div class="card-price">From <strong>AED 2,700,000</strong></div>
+        <div class="card-meta">
+          <div class="card-meta-item">Type <span>Apts & Townhouses</span></div>
+          <div class="card-meta-item">Beds <span>1 – 4 Bed</span></div>
+          <div class="card-meta-item">Handover <span>Sept 2030</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="property-card" onclick="openProject(7)">
+      <div class="card-img">
+        <img src="https://lamiese.github.io/dubaioffplanhomes/arancia-1.png" alt="Arancia Yards City of Arabia" loading="lazy">
+        <span class="card-badge">New Launch</span>
+      </div>
+      <div class="card-body">
+        <div class="card-community">City of Arabia, Dubai</div>
+        <div class="card-title">Arancia Yards by Beyond</div>
+        <div class="card-price">From <strong>AED 1,000,000</strong></div>
+        <div class="card-meta">
+          <div class="card-meta-item">Type <span>Apartments</span></div>
+          <div class="card-meta-item">Beds <span>1, 2 & 3 Bed</span></div>
+          <div class="card-meta-item">Handover <span>2027</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="property-card" onclick="openProject(8)">
+      <div class="card-img">
+        <img src="https://lamiese.github.io/dubaioffplanhomes/binghatti-wraith-1.jpg" alt="Binghatti Wraith Al Jaddaf" loading="lazy">
+        <span class="card-badge">Coming Soon</span>
+      </div>
+      <div class="card-body">
+        <div class="card-community">Al Jaddaf, Dubai</div>
+        <div class="card-title">Binghatti Wraith by Binghatti</div>
+        <div class="card-price">From <strong>AED 799,999</strong></div>
+        <div class="card-meta">
+          <div class="card-meta-item">Type <span>Apartments</span></div>
+          <div class="card-meta-item">Beds <span>Studio – 3 Bed</span></div>
+          <div class="card-meta-item">Handover <span>TBC</span></div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -463,6 +514,7 @@ footer{background:var(--dark2);border-top:1px solid var(--border);padding:60px 6
     <div class="dev-badge" onclick="filterDev('Nshama')">Nshama</div>
     <div class="dev-badge" onclick="filterDev('Ohana Development')">Ohana Development</div>
     <div class="dev-badge" onclick="filterDev('Adaan Developments')">Adaan Developments</div>
+    <div class="dev-badge" onclick="filterDev('Beyond')">Beyond</div>
   </div>
 
   <!-- Developer filter modal -->
@@ -740,6 +792,57 @@ const projects = [
     payment: {during: 60, on_handover: 40, label: "60% During Construction / 40% on Handover"},
     brochure: "https://adaandevelopments.com/",
     floorplan: "https://adaandevelopments.com/"
+  },
+  {
+    title: "Palm Central Private Residences by Nakheel",
+    community: "Palm Jebel Ali, Dubai",
+    img: BASE+"palm-central-1.png",
+    gallery: [BASE+"palm-central-1.png", BASE+"palm-central-2.png", BASE+"palm-central-3.png", BASE+"palm-central-4.png", BASE+"palm-central-5.png", BASE+"palm-central-6.png", BASE+"palm-central-7.png"],
+    stats: [
+      {label:"Starting Price", value:"AED 2,700,000"},
+      {label:"Handover", value:"September 2030"},
+      {label:"Developer", value:"Nakheel"},
+      {label:"Unit Types", value:"Apts & Townhouses"}
+    ],
+    desc: "Palm Central Private Residences is a collection of 220 contemporary, resort-style homes set across three elegant buildings at the heart of Palm Jebel Ali — Nakheel's iconic island development off the coast of Dubai. Offering 1 to 4-bedroom apartments and beach-facing townhouses, each residence is defined by open-plan layouts, floor-to-ceiling glazing and sweeping sea views. The stepped architecture maximises privacy and connection to the outdoors, while ground-floor townhouses open directly onto the landscaped deck and private beach. Located 23 minutes from Bluewaters Island and 28 minutes from Palm Jumeirah, Palm Central delivers resort living at one of Dubai's most prestigious new island addresses.",
+    amenities: ["Direct private beach access for all residents","Infinity pool overlooking the Arabian Gulf","State-of-the-art gym with private fitness studio","Padel court, beach volleyball and outdoor fitness zone","Children's indoor and outdoor play areas","Clubhouse, games room and lobby lounge","Landscaped gardens flowing directly to the beach","All units from AED 2.7M qualify for UAE Golden Visa"],
+    payment: {during: 70, on_handover: 30, label: "20% On Booking / 50% During Construction / 30% On Handover (Sept 2030)"},
+    brochure: "https://www.nakheel.com/",
+    floorplan: "https://www.nakheel.com/"
+  },
+  {
+    title: "Arancia Yards by Beyond",
+    community: "City of Arabia, Dubai",
+    img: BASE+"arancia-1.png",
+    gallery: [BASE+"arancia-1.png", BASE+"arancia-2.png", BASE+"arancia-3.png", BASE+"arancia-4.png", BASE+"arancia-5.png", BASE+"arancia-6.png", BASE+"arancia-7.png", BASE+"arancia-8.png"],
+    stats: [
+      {label:"Starting Price", value:"AED 1,000,000"},
+      {label:"Handover", value:"2027"},
+      {label:"Developer", value:"Beyond"},
+      {label:"Unit Types", value:"Apartments"}
+    ],
+    desc: "Arancia Yards is an exceptional collection of 1, 2 and 3-bedroom residences within City of Arabia — Dubai's newest lifestyle destination. Developed by Beyond, a forward-thinking luxury developer known for contemporary architecture and refined craftsmanship, Arancia Yards offers light-filled interiors with open-plan layouts, soft neutral palettes and expansive windows. The development sits at the heart of City of Arabia, offering seamless connectivity to Global Village (10 minutes), Downtown Dubai (20 minutes) and Dubai International Airport (25 minutes). With landscaped courtyards, resort-style amenities and a flexible 40/60 payment plan, Arancia Yards combines accessibility with genuine lifestyle quality.",
+    amenities: ["Landscaped courtyard gardens with water features","Contemporary open-plan layouts with natural light","Resort-style pool and wellness facilities","10 minutes to Global Village","20 minutes to Downtown Dubai and Burj Khalifa","25 minutes to Dubai International Airport","Adjacent to Dubai Hills Mall and Arabian Ranches","Flexible 40/60 payment plan — 40% during construction"],
+    payment: {during: 40, on_handover: 60, label: "40% During Construction / 60% on Handover"},
+    brochure: "https://www.beyond.ae/",
+    floorplan: "https://www.beyond.ae/"
+  },
+  {
+    title: "Binghatti Wraith by Binghatti",
+    community: "Al Jaddaf, Dubai",
+    img: BASE+"binghatti-wraith-1.jpg",
+    gallery: [BASE+"binghatti-wraith-1.jpg", BASE+"binghatti-wraith-2.png"],
+    stats: [
+      {label:"Starting Price", value:"AED 799,999"},
+      {label:"Handover", value:"TBC"},
+      {label:"Developer", value:"Binghatti"},
+      {label:"Unit Types", value:"Studios & Apartments"}
+    ],
+    desc: "Binghatti Wraith is a bold new expression of luxury in Al Jaddaf, one of Dubai's fastest-growing districts positioned minutes from the Burj Khalifa, Dubai Mall and Downtown Dubai. Inspired by the spirit of automotive excellence and crafted with Binghatti's signature architectural language, this landmark development redefines contemporary sophistication. Every residence is thoughtfully designed with premium finishes, panoramic city views and resort-style amenities. Offering studios from AED 799,999 through to 3-bedroom Royal Suites at AED 3.5 million, Binghatti Wraith presents a compelling opportunity across multiple price points in one of Dubai's most strategically positioned new addresses.",
+    amenities: ["Minutes from Burj Khalifa and Dubai Mall","Binghatti signature architectural design","Studios, 1, 2 and 3-bedroom Royal Suite configurations","Resort-style amenities and vibrant community","Panoramic views of Dubai's iconic skyline","Strong rental demand from Al Jaddaf's growing population","Strategic location near Dubai Creek and DIFC","Proven Binghatti developer track record"],
+    payment: {during: 70, on_handover: 30, label: "70% During Construction / 30% on Handover"},
+    brochure: "https://www.binghatti.com/",
+    floorplan: "https://www.binghatti.com/"
   }
 ];
 
@@ -884,9 +987,15 @@ function filterDev(name) {
       {title:'Fior', community:'Rashid Yachts & Marina', price:'AED 2,210,000', idx:2}
     ],
     'Binghatti': [
-      {title:'Tilal Binghatti', community:'Dubailand', price:'AED 3,000,000', idx:1}
+      {title:'Tilal Binghatti', community:'Dubailand', price:'AED 3,000,000', idx:1},
+      {title:'Binghatti Wraith', community:'Al Jaddaf', price:'AED 799,999', idx:8}
     ],
-    'Ohana Development': [
+    'Nakheel': [
+      {title:'Palm Central Private Residences', community:'Palm Jebel Ali', price:'AED 2,700,000', idx:6}
+    ],
+    'Beyond': [
+      {title:'Arancia Yards', community:'City of Arabia', price:'AED 1,000,000', idx:7}
+    ],
       {title:'Manchester City Yas Residences', community:'Yas Island', price:'AED 1,700,000', idx:4}
     ],
     'Adaan Developments': [
