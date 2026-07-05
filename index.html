@@ -269,7 +269,7 @@ footer{background:var(--dark2);border-top:1px solid var(--border);padding:60px 6
 <section class="hero">
   <div class="hero-tag">Dubai's Off-Plan Property Specialists</div>
   <h1>Invest in Dubai's <em>Finest</em> New Developments</h1>
-  <p>Exclusive access to the full range of off-plan properties from Dubai's most trusted developers. Expert guidance, zero commission to you.</p>
+  <p>Exclusive access to the full range of off-plan properties from Dubai's most trusted developers. Expert guidance, and you never pay a commission.</p>
   <div class="hero-btns">
     <a href="#properties" class="btn-primary">Explore Projects</a>
     <a href="#contact" class="btn-outline">Free Consultation</a>
@@ -292,7 +292,101 @@ footer{background:var(--dark2);border-top:1px solid var(--border);padding:60px 6
     </div>
     <a href="#contact" style="font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);text-decoration:none;border-bottom:1px solid var(--border);padding-bottom:4px">Request Full Portfolio →</a>
   </div>
-  <div class="properties-grid">
+  <div style="max-width:420px;margin:0 0 32px;position:relative">
+    <input type="text" id="projectSearch" oninput="filterProjects()" placeholder="Search by project name, developer or area..." style="width:100%;background:var(--dark2);border:1px solid var(--border);color:var(--white);padding:14px 18px;font-size:.8rem;font-family:'Montserrat',sans-serif;font-weight:300;outline:none;transition:border-color .2s">
+  </div>
+  <div id="noResultsMsg" style="display:none;padding:40px 0;text-align:center;font-size:.82rem;color:var(--grey)">No projects match your search. Try a different name, developer or area.</div>
+  <div class="properties-grid" id="propertiesGrid">
+
+    <div class="property-card" onclick="openProject(11)">
+      <div class="card-img">
+        <img src="https://lamiese.github.io/dubaioffplanhomes/ellington-cove-beachfront-aerial.jpg" alt="Ellington Cove Dubai Islands" loading="lazy">
+        <span class="card-badge">New Launch</span>
+      </div>
+      <div class="card-body">
+        <div class="card-community">Island A, Dubai Islands</div>
+        <div class="card-title">Ellington Cove by Ellington Properties</div>
+        <div class="card-price">Pricing TBC</div>
+        <div class="card-meta">
+          <div class="card-meta-item">Type <span>Apts & Penthouses</span></div>
+          <div class="card-meta-item">Beds <span>1 to 4 Bed</span></div>
+          <div class="card-meta-item">Handover <span>Q2 2028</span></div>
+        </div>
+        <a href="ellington-cove-dubai-islands.html" class="card-btn" onclick="event.stopPropagation()">View Full Details</a>
+      </div>
+    </div>
+
+    <div class="property-card" onclick="openProject(12)">
+      <div class="card-img">
+        <img src="https://lamiese.github.io/dubaioffplanhomes/hado-beyond-exterior.jpg" alt="Hado by Beyond Dubai Islands" loading="lazy">
+        <span class="card-badge">Waterfront</span>
+      </div>
+      <div class="card-body">
+        <div class="card-community">Siora, Dubai Islands</div>
+        <div class="card-title">Hado by Beyond</div>
+        <div class="card-price">From <strong>AED 2,200,000</strong></div>
+        <div class="card-meta">
+          <div class="card-meta-item">Type <span>Apts & Duplexes</span></div>
+          <div class="card-meta-item">Beds <span>1 to 4 Bed</span></div>
+          <div class="card-meta-item">Handover <span>Q3 2029</span></div>
+        </div>
+        <a href="hado-beyond-dubai-islands.html" class="card-btn" onclick="event.stopPropagation()">View Full Details</a>
+      </div>
+    </div>
+
+    <div class="property-card" onclick="openProject(13)">
+      <div class="card-img">
+        <img src="https://lamiese.github.io/dubaioffplanhomes/serra-ghaf-woods-exterior.jpg" alt="Serra at Ghaf Woods Dubai" loading="lazy">
+        <span class="card-badge">New Launch</span>
+      </div>
+      <div class="card-body">
+        <div class="card-community">Ghaf Woods, Dubai</div>
+        <div class="card-title">Serra at Ghaf Woods by Majid Al Futtaim</div>
+        <div class="card-price">From <strong>AED 1,200,000</strong></div>
+        <div class="card-meta">
+          <div class="card-meta-item">Type <span>Apartments</span></div>
+          <div class="card-meta-item">Beds <span>1, 2 & 3 Bed</span></div>
+          <div class="card-meta-item">Handover <span>2027</span></div>
+        </div>
+        <a href="serra-ghaf-woods-dubai.html" class="card-btn" onclick="event.stopPropagation()">View Full Details</a>
+      </div>
+    </div>
+
+    <div class="property-card" onclick="openProject(14)">
+      <div class="card-img">
+        <img src="https://lamiese.github.io/dubaioffplanhomes/athlon-aldar-hero.png" alt="Athlon by Aldar Dubailand" loading="lazy">
+        <span class="card-badge">Featured</span>
+      </div>
+      <div class="card-body">
+        <div class="card-community">Dubailand, Dubai</div>
+        <div class="card-title">Athlon by Aldar</div>
+        <div class="card-price">From <strong>AED 2,818,176</strong></div>
+        <div class="card-meta">
+          <div class="card-meta-item">Type <span>Villas & Townhouses</span></div>
+          <div class="card-meta-item">Beds <span>3 to 6 Bed</span></div>
+          <div class="card-meta-item">Handover <span>Q3 2028</span></div>
+        </div>
+        <a href="athlon-aldar-dubailand.html" class="card-btn" onclick="event.stopPropagation()">View Full Details</a>
+      </div>
+    </div>
+
+    <div class="property-card" onclick="openProject(15)">
+      <div class="card-img">
+        <img src="https://lamiese.github.io/dubaioffplanhomes/wilds-residences-aerial.png" alt="The Wilds Residences by Aldar Dubailand" loading="lazy">
+        <span class="card-badge">New Launch</span>
+      </div>
+      <div class="card-body">
+        <div class="card-community">The Wilds, Dubailand</div>
+        <div class="card-title">The Wilds Residences by Aldar</div>
+        <div class="card-price">From <strong>AED 1,600,000</strong></div>
+        <div class="card-meta">
+          <div class="card-meta-item">Type <span>Apts & Duplexes</span></div>
+          <div class="card-meta-item">Beds <span>Studio to 3 Bed</span></div>
+          <div class="card-meta-item">Handover <span>Q2 2030</span></div>
+        </div>
+        <a href="wilds-residences-aldar-dubailand.html" class="card-btn" onclick="event.stopPropagation()">View Full Details</a>
+      </div>
+    </div>
 
     <div class="property-card" onclick="openProject(0)">
       <div class="card-img">
@@ -594,7 +688,7 @@ footer{background:var(--dark2);border-top:1px solid var(--border);padding:60px 6
       <div class="section-label">Latest Articles</div>
       <div class="section-title">From the Blog</div>
     </div>
-    <a href="blog.html" style="font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);text-decoration:none;border-bottom:1px solid var(--border);padding-bottom:4px">View All 11 Articles →</a>
+    <a href="blog.html" style="font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);text-decoration:none;border-bottom:1px solid var(--border);padding-bottom:4px">View All 33 Articles →</a>
   </div>
   <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:2px">
     <a href="dubai-property-iran-war-invest-2026.html" style="background:var(--dark);text-decoration:none;color:var(--white);display:block">
@@ -939,8 +1033,106 @@ const projects = [
     payment: {during: 50, on_handover: 30, label: "20% Deposit / 50% During Construction / 30% on Handover (typical Ellington structure, to be confirmed at launch)"},
     brochure: "https://ellingtonproperties.ae/",
     floorplan: "https://ellingtonproperties.ae/"
+  },
+  {
+    title: "Ellington Cove by Ellington Properties",
+    community: "Island A, Dubai Islands",
+    img: BASE+"ellington-cove-beachfront-aerial.jpg",
+    gallery: [BASE+"ellington-cove-beachfront-aerial.jpg", BASE+"ellington-cove-residences-entrance.jpg", BASE+"ellington-cove-facade-beachside.jpg", BASE+"ellington-cove-pool-beach-view.jpg", BASE+"ellington-cove-penthouse-rooftop-pool.jpg", BASE+"ellington-cove-outdoor-restaurant.jpg", BASE+"ellington-cove-clubhouse-dusk.jpg", BASE+"ellington-cove-arrival-courtyard.jpg", BASE+"ellington-cove-waterfall-feature.jpg", BASE+"ellington-cove-entrance-signage-dusk.jpg"],
+    stats: [
+      {label:"Starting Price", value:"TBC"},
+      {label:"Handover", value:"Q2 2028"},
+      {label:"Developer", value:"Ellington Properties"},
+      {label:"Unit Types", value:"Apts & Penthouses"}
+    ],
+    desc: "Ellington Cove is a new waterfront launch by Ellington Properties on Island A of Dubai Islands. The collection offers 1 to 3 bedroom apartments from 816 sq ft and 4 bedroom penthouses of 5,886 sq ft, with private beach access, landscaped gardens and a full suite of resort style amenities. Positioned within the Dubai 2040 Urban Master Plan vision for Dubai Islands, the development is a 7 minute drive to Al Maktoum International Airport, 10 minutes to Expo City Dubai, 20 minutes to Dubai Marina and 30 minutes to Downtown Dubai. Completion is scheduled for Q2 2028 on a 70/30 payment plan.",
+    amenities: ["Private beach access","Landscaped gardens throughout the development","Multiple swimming pools","State of the art fitness centre","Indoor and outdoor children's play areas","Dedicated water activity zone","Marina boardwalk access","Boutique retail outlets"],
+    payment: {during: 50, on_handover: 30, label: "20% Deposit / 50% During Construction / 30% on Handover"},
+    brochure: "https://ellingtonproperties.ae/",
+    floorplan: "https://ellingtonproperties.ae/"
+  },
+  {
+    title: "Hado by Beyond",
+    community: "Siora, Dubai Islands",
+    img: BASE+"hado-beyond-exterior.jpg",
+    gallery: [BASE+"hado-beyond-exterior.jpg", BASE+"hado-beyond-facade.jpg", BASE+"hado-beyond-balcony.jpg", BASE+"hado-beyond-living.jpg", BASE+"hado-beyond-bedroom.jpg", BASE+"hado-beyond-kitchen.jpg"],
+    stats: [
+      {label:"Starting Price", value:"AED 2,200,000"},
+      {label:"Handover", value:"Q3 2029"},
+      {label:"Developer", value:"Beyond (Omniyat)"},
+      {label:"Unit Types", value:"1 to 4 Bed Apts & Duplexes"}
+    ],
+    desc: "Hado by Beyond is a wellbeing focused, Japanese inspired residential development within the Siora community on Dubai Islands. Comprising three towers rising 21 residential levels above a ground floor and basement, the project is positioned along North Beach on Island B, with layouts designed around natural light, balance and unobstructed coastal views. The name Hado draws on Japanese concepts of energy, frequency and intention, principles that run through the architecture, interior design and amenity offering.",
+    amenities: ["Elevated swimming pool with coastal views","Kids pool area","Yoga and wellness spa","Indoor and outdoor gym","Outdoor cinema","Multipurpose room","BBQ and picnic area","Co-working space"],
+    payment: {during: 50, on_handover: 30, label: "Payment plan to be confirmed, typical Beyond structure around 50% During Construction / 30% on Handover with 20% deposit"},
+    brochure: "https://www.beyond.ae/",
+    floorplan: "https://www.beyond.ae/"
+  },
+  {
+    title: "Serra at Ghaf Woods by Majid Al Futtaim",
+    community: "Ghaf Woods, Dubai",
+    img: BASE+"serra-ghaf-woods-exterior.jpg",
+    gallery: [BASE+"serra-ghaf-woods-exterior.jpg", BASE+"serra-ghaf-woods-clubhouse.jpg", BASE+"serra-ghaf-woods-interior.jpg", BASE+"serra-ghaf-woods-bedroom.jpg"],
+    stats: [
+      {label:"Starting Price", value:"AED 1,200,000"},
+      {label:"Handover", value:"2027"},
+      {label:"Developer", value:"Majid Al Futtaim"},
+      {label:"Unit Types", value:"1, 2 & 3 Bed Apartments"}
+    ],
+    desc: "Serra at Ghaf Woods is situated next to Global Village, one of Dubai's most popular entertainment and cultural destinations, flanked by Sheikh Mohammed Bin Zayed Road and Sheikh Bin Hamdan Al Nahyan Street. The location offers strong connectivity across Dubai while maintaining the tranquil, nature led environment that defines the Ghaf Woods community.",
+    amenities: ["Swimming pool set within the forest landscape","Indoor and outdoor gym","BBQ facilities and outdoor dining areas","Co-working space","Community parks and forest walking trails","Town centre with retail and dining options","Forest clubhouse and residents lounge","Children's play areas within the forest"],
+    payment: {during: 50, on_handover: 30, label: "Payment plan to be confirmed, typical Majid Al Futtaim structure around 50% During Construction / 30% on Handover with 20% deposit"},
+    brochure: "https://www.maf.ae/",
+    floorplan: "https://www.maf.ae/"
+  },
+  {
+    title: "Athlon by Aldar",
+    community: "Dubailand, Dubai",
+    img: BASE+"athlon-aldar-hero.png",
+    gallery: [BASE+"athlon-aldar-hero.png", BASE+"athlon-aldar-villa-exterior.png", BASE+"athlon-aldar-cycling.png", BASE+"athlon-aldar-padel.png", BASE+"athlon-aldar-pool.png"],
+    stats: [
+      {label:"Starting Price", value:"AED 2,818,176"},
+      {label:"Handover", value:"Q3 2028"},
+      {label:"Developer", value:"Aldar Properties"},
+      {label:"Unit Types", value:"Villas & Townhouses"}
+    ],
+    desc: "Athlon by Aldar is Dubai's first master planned community built entirely around the principle of active living. Developed in partnership with Manchester City Football Club and designed with input from world leading wellbeing experts, Athlon integrates movement into every aspect of daily life. The development spans 1,492 units across nine distinct sub communities in Dubailand, adjacent to Arabian Ranches 3, with unit types ranging from 3 and 4 bedroom townhouses to 3 to 6 bedroom standalone villas.",
+    amenities: ["4.6km trail running loop and 2.2km family friendly walking loop","3.7km cycling loop connecting to Al Qudra cycling tracks","Nature loop, bike loop and parklife loop throughout the community","Outdoor fitness nodes and running and cycling tracks","XL pool, splash pad and podium pool","Padel courts, squash courts and basketball courts","Rock climbing wall","Skate park and pump track for mountain biking"],
+    payment: {during: 60, on_handover: 40, label: "Payment plan to be confirmed, typical Aldar structure around 60% During Construction / 40% on Handover"},
+    brochure: "https://www.aldar.com/",
+    floorplan: "https://www.aldar.com/"
+  },
+  {
+    title: "The Wilds Residences by Aldar",
+    community: "The Wilds, Dubailand",
+    img: BASE+"wilds-residences-aerial.png",
+    gallery: [BASE+"wilds-residences-aerial.png", BASE+"wilds-residences-villas.png", BASE+"wilds-residences-pool.png", BASE+"wilds-residences-exterior.png"],
+    stats: [
+      {label:"Starting Price", value:"AED 1,600,000"},
+      {label:"Handover", value:"Q2 2030"},
+      {label:"Developer", value:"Aldar Properties"},
+      {label:"Unit Types", value:"Apts & Duplexes"}
+    ],
+    desc: "The Wilds Residences by Aldar introduces 740 apartments and duplexes within The Wilds master community in Dubailand, one of Dubai's most ambitious nature led residential developments. Located adjacent to Al Barari and Majan along Sheikh Mohammed bin Zayed Road, directly opposite Global Village, the development expands access to a community that previously launched as a villa only phase and sold out rapidly.",
+    amenities: ["Nature inspired infinity pool","Theatre room","Pilates and yoga studio","Spa splash pad","Kids lounge and teens lounge","Family lounge","Art studio","Co-working space (The Nook)"],
+    payment: {during: 60, on_handover: 40, label: "Payment plan to be confirmed, typical Aldar structure around 60% During Construction / 40% on Handover"},
+    brochure: "https://www.aldar.com/",
+    floorplan: "https://www.aldar.com/"
   }
 ];
+
+function filterProjects() {
+  const q = document.getElementById('projectSearch').value.trim().toLowerCase();
+  const cards = document.querySelectorAll('#propertiesGrid .property-card');
+  let visibleCount = 0;
+  cards.forEach(card => {
+    const text = card.textContent.toLowerCase();
+    const match = text.includes(q);
+    card.style.display = match ? '' : 'none';
+    if (match) visibleCount++;
+  });
+  document.getElementById('noResultsMsg').style.display = visibleCount === 0 ? 'block' : 'none';
+}
 
 let currentProject = null;
 let currentGalleryIdx = 0;
