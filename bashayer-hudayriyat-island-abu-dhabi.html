@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bashayer, Hudayriyat Island | Waterfront Villas & Residences in Abu Dhabi</title>
+<meta name="description" content="Bashayer is a waterfront off-plan community on Hudayriyat Island, Abu Dhabi by Modon Properties. 4 to 5-bedroom villas and 1 to 4-bedroom residences with a 50/50 payment plan. Enquire today.">
+<link rel="canonical" href="https://www.dubaioffplanhomes.com/bashayer-hudayriyat-island-abu-dhabi.html">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-268VXGKQQ3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-268VXGKQQ3');
+</script>
+
+<style>
+  :root {
+    --black: #0a0a0a;
+    --near-black: #121212;
+    --gold: #c9a24b;
+    --gold-light: #e0c17a;
+    --cream: #f4f1ea;
+    --grey: #9a9a9a;
+    --white: #ffffff;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--black);
+    color: var(--cream);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    line-height: 1.7;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    color: var(--white);
+    letter-spacing: 0.5px;
+  }
+
+  a { color: var(--gold); text-decoration: none; }
+
+  img { max-width: 100%; display: block; }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* NAV */
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background: rgba(10,10,10,0.95);
+    border-bottom: 1px solid rgba(201,162,75,0.25);
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: 1px;
+  }
+  .logo span { color: var(--gold); }
+
+  .nav-links {
+    display: flex;
+    gap: 36px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    color: var(--cream);
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 400;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--gold); }
+
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    background: none;
+    border: none;
+  }
+  .hamburger span {
+    width: 26px;
+    height: 2px;
+    background: var(--gold);
+  }
+
+  @media (max-width: 860px) {
+    .nav-links {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: var(--near-black);
+      flex-direction: column;
+      gap: 0;
+      border-top: 1px solid rgba(201,162,75,0.2);
+    }
+    .nav-links.open { display: flex; }
+    .nav-links li { border-bottom: 1px solid rgba(255,255,255,0.05); }
+    .nav-links a { display: block; padding: 16px 24px; }
+    .hamburger { display: flex; }
+  }
+
+  /* HERO GALLERY */
+  .hero {
+    position: relative;
+    height: 88vh;
+    min-height: 560px;
+    overflow: hidden;
+  }
+
+  .hero-slide {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+  }
+  .hero-slide.active { opacity: 1; }
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.25) 40%, rgba(0,0,0,0.75) 100%);
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 24px 64px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .hero-badge {
+    display: inline-block;
+    border: 1px solid var(--gold);
+    color: var(--gold-light);
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 6px 16px;
+    margin-bottom: 20px;
+    width: fit-content;
+  }
+
+  .hero h1 {
+    font-size: clamp(42px, 6vw, 76px);
+    line-height: 1.05;
+    margin-bottom: 12px;
+  }
+
+  .hero-sub {
+    font-size: 17px;
+    color: var(--cream);
+    font-weight: 300;
+    margin-bottom: 28px;
+    max-width: 560px;
+  }
+
+  .hero-sub em { color: var(--grey); font-style: normal; font-size: 14px; }
+
+  .btn {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--black);
+    padding: 15px 36px;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-weight: 600;
+    width: fit-content;
+    transition: background 0.2s;
+  }
+  .btn:hover { background: var(--gold-light); }
+
+  /* STATS BAR */
+  .stats-bar {
+    background: var(--near-black);
+    border-bottom: 1px solid rgba(201,162,75,0.2);
+    padding: 32px 0;
+  }
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    text-align: center;
+  }
+  .stat-label {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--grey);
+    margin-bottom: 8px;
+  }
+  .stat-value {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    color: var(--gold-light);
+    font-weight: 600;
+  }
+  @media (max-width: 700px) {
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  /* MAIN LAYOUT */
+  .main-wrap {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 60px;
+    padding: 72px 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  @media (max-width: 960px) {
+    .main-wrap { grid-template-columns: 1fr; }
+  }
+
+  .section { margin-bottom: 64px; }
+  .section h2 {
+    font-size: 34px;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 16px;
+  }
+  .section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 48px; height: 2px;
+    background: var(--gold);
+  }
+  .section p { color: #cfcac0; font-size: 15.5px; margin-bottom: 16px; }
+
+  .two-col-copy { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+  @media (max-width: 700px) { .two-col-copy { grid-template-columns: 1fr; } }
+  .two-col-copy h3 { font-size: 24px; color: var(--gold-light); margin-bottom: 12px; }
+
+  /* FACTSHEET */
+  .factsheet-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  @media (max-width: 700px) { .factsheet-grid { grid-template-columns: 1fr; } }
+  .fact-card {
+    border: 1px solid rgba(201,162,75,0.3);
+    padding: 28px 24px;
+  }
+  .fact-card h4 { font-size: 21px; color: var(--gold-light); margin-bottom: 16px; }
+  .fact-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+    font-size: 14px;
+  }
+  .fact-row:last-child { border-bottom: none; }
+  .fact-row span:first-child { color: var(--grey); }
+  .fact-row span:last-child { color: var(--cream); font-weight: 500; }
+
+  /* AMENITIES */
+  .amenities-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 28px;
+    text-align: center;
+  }
+  @media (max-width: 700px) { .amenities-grid { grid-template-columns: repeat(2, 1fr); } }
+  .amenity-item { font-size: 13.5px; color: #cfcac0; }
+  .amenity-icon {
+    width: 44px; height: 44px;
+    margin: 0 auto 10px;
+    border: 1px solid var(--gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gold-light);
+    font-size: 18px;
+  }
+
+  /* GALLERY GRID */
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+  @media (max-width: 700px) { .gallery-grid { grid-template-columns: repeat(2, 1fr); } }
+  .gallery-grid img { height: 220px; object-fit: cover; }
+
+  /* LOCATION */
+  .location-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  @media (max-width: 700px) { .location-grid { grid-template-columns: 1fr 1fr; } }
+  .loc-item {
+    border-left: 2px solid var(--gold);
+    padding-left: 14px;
+  }
+  .loc-time { font-family: 'Cormorant Garamond', serif; font-size: 24px; color: var(--gold-light); }
+  .loc-place { font-size: 13px; color: var(--grey); }
+
+  /* FAQ */
+  .faq-item { border-bottom: 1px solid rgba(255,255,255,0.08); padding: 20px 0; }
+  .faq-item h4 { font-size: 18px; color: var(--white); margin-bottom: 10px; font-family: 'Montserrat', sans-serif; font-weight: 500; }
+  .faq-item p { font-size: 14.5px; }
+
+  /* SIDEBAR FORM */
+  .sidebar {
+    position: sticky;
+    top: 100px;
+    align-self: start;
+    background: var(--near-black);
+    border: 1px solid rgba(201,162,75,0.3);
+    padding: 32px 28px;
+  }
+  .sidebar h3 { font-size: 24px; color: var(--gold-light); margin-bottom: 8px; }
+  .sidebar p.note { color: var(--grey); font-size: 13.5px; margin-bottom: 22px; }
+
+  .sidebar input, .sidebar textarea {
+    width: 100%;
+    background: var(--black);
+    border: 1px solid rgba(255,255,255,0.15);
+    color: var(--cream);
+    padding: 13px 14px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    margin-bottom: 14px;
+  }
+  .sidebar textarea { resize: vertical; min-height: 90px; }
+  .sidebar button {
+    width: 100%;
+    background: var(--gold);
+    color: var(--black);
+    border: none;
+    padding: 15px;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .sidebar button:hover { background: var(--gold-light); }
+
+  /* FOOTER */
+  footer {
+    background: var(--near-black);
+    border-top: 1px solid rgba(201,162,75,0.2);
+    padding: 48px 24px 28px;
+    text-align: center;
+  }
+  footer .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    list-style: none;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+  }
+  footer .footer-links a { color: var(--cream); font-size: 13px; letter-spacing: 1px; text-transform: uppercase; }
+  footer p { color: var(--grey); font-size: 12.5px; }
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="logo">Dubai <span>Off Plan</span> Homes</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="areas.html">Areas</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<!-- HERO GALLERY -->
+<section class="hero" id="heroGallery">
+  <div class="hero-slide active" style="background-image:url('bashayer-villas-waterfront-aerial.jpg')"></div>
+  <div class="hero-slide" style="background-image:url('bashayer-abu-dhabi-waterfront-pool.jpg')"></div>
+  <div class="hero-slide" style="background-image:url('bashayer-infinity-pool-skyline-view.jpg')"></div>
+  <div class="hero-slide" style="background-image:url('bashayer-villas-pool-twilight.jpg')"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <span class="hero-badge">Hudayriyat Island, Abu Dhabi</span>
+    <h1>Bashayer</h1>
+    <p class="hero-sub">Waterfront villas and residences inspired by European coastal villages, set on Abu Dhabi's Hudayriyat Island. <em>By Modon Properties.</em></p>
+    <a href="#enquire" class="btn">Register Your Interest</a>
+  </div>
+</section>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="container stats-grid">
+    <div>
+      <div class="stat-label">Starting Price</div>
+      <div class="stat-value">AED 2.35M</div>
+    </div>
+    <div>
+      <div class="stat-label">Payment Plan</div>
+      <div class="stat-value">50 / 50</div>
+    </div>
+    <div>
+      <div class="stat-label">Handover</div>
+      <div class="stat-value">From Q1 2029</div>
+    </div>
+    <div>
+      <div class="stat-label">Location</div>
+      <div class="stat-value">Hudayriyat Island</div>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN CONTENT + SIDEBAR -->
+<div class="main-wrap">
+  <main>
+
+    <div class="section">
+      <h2>About Bashayer</h2>
+      <p>Bashayer is a waterfront community on Hudayriyat Island, developed by Modon Properties. Drawing on the look and feel of European coastal villages, the development sits directly on the water along Abu Dhabi's fast-growing island district, best known for its beaches, cycling trails, and the Surf Abu Dhabi wave pool.</p>
+      <p>The community is split into two distinct offerings: a gated enclave of low-rise villas, and a waterfront residential building of apartments and penthouses, both built around shared resort-style amenities and direct access to the marina promenade.</p>
+    </div>
+
+    <div class="section">
+      <div class="two-col-copy">
+        <div>
+          <h3>Bashayer Villas</h3>
+          <p>A gated collection of 4 and 5-bedroom villas ranging from 365 to 590 sqm, set within a quiet, low-density waterfront enclave. Each villa is designed with generous interior space, private outdoor areas, and close proximity to the water's edge.</p>
+        </div>
+        <div>
+          <h3>Bashayer Residences</h3>
+          <p>A collection of 1 to 3-bedroom apartments and 4-bedroom penthouses within a single waterfront building, featuring floor-to-ceiling glazing, private balconies, and uninterrupted views across the Abu Dhabi skyline and coastline.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Factsheet</h2>
+      <div class="factsheet-grid">
+        <div class="fact-card">
+          <h4>4-5 Bedroom Villas</h4>
+          <div class="fact-row"><span>Size</span><span>365 - 590 sqm</span></div>
+          <div class="fact-row"><span>Payment Plan</span><span>50 / 50</span></div>
+          <div class="fact-row"><span>Handover</span><span>Q1 2029</span></div>
+          <div class="fact-row"><span>Starting Price</span><span>AED 7.2M</span></div>
+        </div>
+        <div class="fact-card">
+          <h4>1 Bedroom Residence</h4>
+          <div class="fact-row"><span>Size</span><span>112 sqm</span></div>
+          <div class="fact-row"><span>Payment Plan</span><span>50 / 50</span></div>
+          <div class="fact-row"><span>Handover</span><span>Q1 2030</span></div>
+          <div class="fact-row"><span>Average Price</span><span>AED 2.35M</span></div>
+        </div>
+        <div class="fact-card">
+          <h4>2 Bedroom Residence</h4>
+          <div class="fact-row"><span>Size</span><span>156 sqm</span></div>
+          <div class="fact-row"><span>Payment Plan</span><span>50 / 50</span></div>
+          <div class="fact-row"><span>Handover</span><span>Q1 2030</span></div>
+          <div class="fact-row"><span>Average Price</span><span>AED 3.6M</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Gallery</h2>
+      <div class="gallery-grid">
+        <img src="bashayer-residences-waterfront-exterior.jpg" alt="Bashayer Residences waterfront exterior, Hudayriyat Island">
+        <img src="bashayer-residences-entrance-courtyard.jpg" alt="Bashayer Residences entrance courtyard">
+        <img src="bashayer-apartment-living-room-sea-view.jpg" alt="Bashayer apartment living room with sea view">
+        <img src="bashayer-villas-exterior-dusk.jpg" alt="Bashayer villa exterior at dusk">
+        <img src="bashayer-villas-exterior-pool-day.jpg" alt="Bashayer villa with private pool">
+        <img src="bashayer-villa-master-bedroom-sea-view.jpg" alt="Bashayer villa master bedroom with sea view">
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Amenities</h2>
+      <div class="amenities-grid">
+        <div class="amenity-item"><div class="amenity-icon">&#9733;</div>Gated Community</div>
+        <div class="amenity-item"><div class="amenity-icon">&#9733;</div>Community Centre</div>
+        <div class="amenity-item"><div class="amenity-icon">&#9733;</div>Children's Play Area</div>
+        <div class="amenity-item"><div class="amenity-icon">&#9733;</div>Waterfront Location</div>
+        <div class="amenity-item"><div class="amenity-icon">&#9733;</div>Swimming Pool</div>
+        <div class="amenity-item"><div class="amenity-icon">&#9733;</div>Park &amp; Green Spaces</div>
+        <div class="amenity-item"><div class="amenity-icon">&#9733;</div>Padel Courts</div>
+        <div class="amenity-item"><div class="amenity-icon">&#9733;</div>Multi-Sports Court</div>
+        <div class="amenity-item"><div class="amenity-icon">&#9733;</div>Cycling &amp; Jogging Trails</div>
+        <div class="amenity-item"><div class="amenity-icon">&#9733;</div>Gym</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Location &amp; Connectivity</h2>
+      <p>Bashayer sits on the northern edge of Hudayriyat Island, minutes from Abu Dhabi's main business and cultural districts, with the wider island's beaches, trails, and Surf Abu Dhabi within easy reach.</p>
+      <div class="location-grid">
+        <div class="loc-item"><div class="loc-time">15 mins</div><div class="loc-place">Sheikh Zayed Grand Mosque</div></div>
+        <div class="loc-item"><div class="loc-time">25 mins</div><div class="loc-place">Zayed International Airport</div></div>
+        <div class="loc-item"><div class="loc-time">25 mins</div><div class="loc-place">Abu Dhabi Global Market (ADGM)</div></div>
+        <div class="loc-item"><div class="loc-time">35 mins</div><div class="loc-place">Saadiyat Island</div></div>
+        <div class="loc-item"><div class="loc-time">75 mins</div><div class="loc-place">Al Maktoum International Airport</div></div>
+        <div class="loc-item"><div class="loc-time">90 mins</div><div class="loc-place">Downtown Dubai</div></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-item">
+        <h4>When is the expected handover date for Bashayer?</h4>
+        <p>Villas are scheduled for handover in Q1 2029, while residences are expected to hand over in Q1 2030.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>Are Bashayer homeowners eligible for the UAE Golden Visa?</h4>
+        <p>Yes. Starting prices for both apartments and villas at Bashayer exceed the AED 2 million minimum threshold required to apply for the 10-year Golden Visa.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>What is the starting price at Bashayer?</h4>
+        <p>One-bedroom apartments start from AED 2.35 million, and four to five-bedroom villas start from AED 7.2 million. A 50/50 payment plan applies, with 10% due on booking, 40% during construction, and 50% on handover.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>Where exactly is Bashayer located?</h4>
+        <p>Bashayer is located on Hudayriyat Island in Abu Dhabi, close to Bashayer Marina and the wider Hudayriyat Island master community, with direct access to the island's beaches and leisure trails.</p>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- SIDEBAR ENQUIRY FORM -->
+  <aside class="sidebar" id="enquire">
+    <h3>Register Your Interest</h3>
+    <p class="note">Speak with our team about availability, pricing, and payment plans at Bashayer.</p>
+    <form action="https://formspree.io/f/xnjrobnq" method="POST">
+      <input type="hidden" name="project" value="Bashayer, Hudayriyat Island">
+      <input type="text" name="name" placeholder="Full Name" required>
+      <input type="email" name="email" placeholder="Email Address" required>
+      <input type="tel" name="phone" placeholder="Phone Number" required>
+      <textarea name="message" placeholder="I'm interested in Bashayer..."></textarea>
+      <button type="submit">Send Enquiry</button>
+    </form>
+  </aside>
+</div>
+
+<footer>
+  <ul class="footer-links">
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="areas.html">Areas</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <p>&copy; 2026 Dubai Off Plan Homes. All rights reserved.</p>
+</footer>
+
+<script>
+  function toggleMenu() {
+    document.getElementById('navLinks').classList.toggle('open');
+  }
+
+  // Hero gallery auto-rotate
+  (function() {
+    const slides = document.querySelectorAll('#heroGallery .hero-slide');
+    let current = 0;
+    setInterval(() => {
+      slides[current].classList.remove('active');
+      current = (current + 1) % slides.length;
+      slides[current].classList.add('active');
+    }, 5000);
+  })();
+</script>
+
+</body>
+</html>
