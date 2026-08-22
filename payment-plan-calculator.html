@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dubai Off-Plan Payment Plan Calculator | Free Instalment Schedule Tool</title>
+<meta name="description" content="Free Dubai off-plan payment plan calculator. Enter a property price and payment structure to see your instalment schedule, down payment, and post-handover breakdown instantly.">
+<meta name="keywords" content="Dubai off plan payment plan calculator, off plan payment schedule Dubai, Dubai property instalment calculator, post handover payment plan Dubai, 1% monthly payment plan Dubai">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Dubai Off Plan Homes">
+<link rel="canonical" href="https://www.dubaioffplanhomes.com/payment-plan-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Dubai Off-Plan Payment Plan Calculator | Free Instalment Schedule Tool">
+<meta property="og:description" content="Enter a property price and payment structure to see your Dubai off-plan instalment schedule instantly, free.">
+<meta property="og:url" content="https://www.dubaioffplanhomes.com/payment-plan-calculator.html">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Dubai Off-Plan Payment Plan Calculator","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"AED"},"publisher":{"@type":"Organization","name":"Dubai Off Plan Homes","url":"https://www.dubaioffplanhomes.com"}}</script>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-268VXGKQQ3"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-268VXGKQQ3');</script>
+<style>
+:root{--black:#0a0a0a;--dark:#111111;--dark2:#1a1a1a;--dark3:#161616;--gold:#c9a84c;--gold-light:#e8c97a;--gold-dim:rgba(201,168,76,0.15);--white:#f5f2ec;--grey:#888;--border:rgba(201,168,76,0.2);--green:#7fae7a}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--black);color:var(--white);font-family:'Montserrat',sans-serif;font-weight:300;overflow-x:hidden}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:22px 40px;background:rgba(10,10,10,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:300;letter-spacing:.1em;color:var(--gold);text-decoration:none;white-space:nowrap}
+.nav-logo span{color:var(--white)}
+.nav-links{display:flex;gap:24px;list-style:none;align-items:center}
+.nav-links a{text-decoration:none;color:var(--white);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;font-weight:500;transition:color .2s;white-space:nowrap}
+.nav-links a:hover{color:var(--gold)}
+.nav-cta{background:var(--gold);color:var(--black);padding:10px 20px;font-size:.65rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;text-decoration:none;white-space:nowrap}
+.nav-cta:hover{background:var(--gold-light)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none}
+.hamburger span{width:24px;height:1px;background:var(--gold)}
+.mobile-menu{display:none;position:fixed;inset:0;background:rgba(10,10,10,0.98);z-index:99;flex-direction:column;align-items:center;justify-content:center;gap:32px}
+.mobile-menu.open{display:flex}
+.mobile-menu a{text-decoration:none;color:var(--white);font-size:1.1rem;letter-spacing:.18em;text-transform:uppercase}
+.mobile-menu-close{position:absolute;top:24px;right:28px;background:none;border:none;color:var(--gold);font-size:1.8rem;cursor:pointer}
+@media(max-width:768px){.nav-links,.nav-cta{display:none}.hamburger{display:flex}}
+
+.hero{padding:150px 40px 60px;text-align:center;max-width:760px;margin:0 auto}
+.tag{font-size:.62rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);border:1px solid var(--border);padding:7px 18px;margin-bottom:24px;display:inline-block}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4.5vw,3.2rem);font-weight:300;line-height:1.15}
+.hero h1 em{font-style:italic;color:var(--gold)}
+.hero p{margin-top:18px;font-size:.84rem;line-height:1.9;color:rgba(245,242,236,.7);max-width:560px;margin-left:auto;margin-right:auto}
+
+.calc-wrap{max-width:1080px;margin:0 auto;padding:0 40px 100px;display:grid;grid-template-columns:360px 1fr;gap:2px}
+.panel{background:var(--dark2);border:1px solid var(--border)}
+.panel-inputs{padding:36px 32px}
+.panel-inputs h3{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:400;color:var(--gold);margin-bottom:24px}
+.field{margin-bottom:20px}
+.field label{display:block;font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:var(--grey);margin-bottom:8px}
+.field-value{float:right;color:var(--gold);font-weight:500}
+.field input[type=number]{width:100%;background:var(--dark);border:1px solid var(--border);color:var(--white);padding:12px 14px;font-size:.85rem;font-family:'Montserrat',sans-serif;font-weight:400;outline:none}
+.field input[type=number]:focus{border-color:var(--gold)}
+.field input[type=range]{width:100%;accent-color:var(--gold);margin-top:6px}
+.presets{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:28px}
+.preset-btn{background:var(--dark);border:1px solid var(--border);color:rgba(245,242,236,.75);padding:10px 8px;font-size:.62rem;letter-spacing:.04em;text-align:center;cursor:pointer;transition:.2s;font-family:'Montserrat',sans-serif}
+.preset-btn:hover{border-color:var(--gold);color:var(--gold)}
+.preset-btn.active{background:var(--gold-dim);border-color:var(--gold);color:var(--gold)}
+.split-warning{font-size:.65rem;color:#d98c5f;margin-top:10px;line-height:1.6;display:none}
+.split-warning.show{display:block}
+
+.panel-results{padding:36px 40px}
+.result-top{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-bottom:36px}
+.result-stat{background:var(--dark);border:1px solid var(--border);padding:18px;text-align:center}
+.result-stat-val{font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--gold);font-weight:300;display:block}
+.result-stat-label{font-size:.56rem;letter-spacing:.14em;text-transform:uppercase;color:var(--grey);margin-top:4px;display:block}
+
+.timeline-label{font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:var(--grey);margin-bottom:10px}
+.timeline{display:flex;height:44px;border:1px solid var(--border);overflow:hidden;margin-bottom:8px}
+.timeline-seg{display:flex;align-items:center;justify-content:center;font-size:.6rem;font-weight:600;letter-spacing:.02em;color:var(--black);white-space:nowrap;overflow:hidden;transition:width .3s ease}
+.seg-down{background:var(--gold)}
+.seg-construction{background:var(--gold-light)}
+.seg-handover{background:#8a9a8f;color:var(--white)}
+.seg-post{background:var(--dark3);color:var(--gold);border-left:1px solid var(--border)}
+.timeline-legend{display:flex;gap:18px;flex-wrap:wrap;margin-bottom:40px}
+.legend-item{display:flex;align-items:center;gap:6px;font-size:.62rem;color:rgba(245,242,236,.65)}
+.legend-dot{width:8px;height:8px;flex-shrink:0}
+
+.schedule-table{width:100%;border-collapse:collapse;font-size:.76rem;margin-bottom:8px}
+.schedule-table th{text-align:left;padding:10px 14px;color:var(--grey);font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;border-bottom:1px solid var(--border);font-weight:500}
+.schedule-table td{padding:11px 14px;border-bottom:1px solid var(--border);color:rgba(245,242,236,.8)}
+.schedule-table td:last-child,.schedule-table th:last-child{text-align:right;color:var(--gold)}
+.schedule-note{font-size:.62rem;color:var(--grey);margin-top:14px;line-height:1.8}
+
+.disclaimer{max-width:1080px;margin:0 auto;padding:0 40px 40px;font-size:.62rem;color:var(--grey);line-height:1.8}
+
+.explain{max-width:780px;margin:0 auto;padding:20px 40px 80px}
+.explain h2{font-family:'Cormorant Garamond',serif;font-size:1.7rem;font-weight:300;color:var(--gold);margin:44px 0 14px}
+.explain p{font-size:.83rem;line-height:1.95;color:rgba(245,242,236,.72);margin-bottom:16px}
+.explain strong{color:var(--white);font-weight:500}
+
+.register-box{max-width:780px;margin:0 auto 80px;background:linear-gradient(135deg,var(--dark2) 0%,rgba(201,168,76,0.08) 100%);border:1px solid var(--gold);padding:44px 40px;text-align:center}
+.register-box h3{font-family:'Cormorant Garamond',serif;font-size:1.7rem;font-weight:300;margin-bottom:12px;color:var(--gold)}
+.register-box p{font-size:.82rem;color:rgba(245,242,236,.72);margin-bottom:28px;line-height:1.8;max-width:480px;margin-left:auto;margin-right:auto}
+.register-form{max-width:460px;margin:0 auto;text-align:left}
+.form-group{margin-bottom:14px}
+.form-group input{width:100%;background:var(--dark);border:1px solid var(--border);color:var(--white);padding:13px 16px;font-size:.78rem;font-family:'Montserrat',sans-serif;font-weight:300;outline:none}
+.form-group input:focus{border-color:var(--gold)}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.form-submit{width:100%;background:var(--gold);color:var(--black);border:none;padding:15px;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;font-weight:600;cursor:pointer;font-family:'Montserrat',sans-serif;margin-top:6px}
+.form-submit:hover{background:var(--gold-light)}
+.form-note{font-size:.6rem;color:var(--grey);text-align:center;margin-top:10px}
+.success-msg{display:none;text-align:center;padding:20px;background:var(--gold-dim);border:1px solid var(--gold);margin-top:16px}
+.success-msg p{font-size:.78rem;color:var(--white)}
+
+footer{background:var(--dark2);border-top:1px solid var(--border);padding:40px 60px;text-align:center;font-size:.65rem;color:var(--grey)}
+footer a{color:var(--grey);text-decoration:none}
+footer a:hover{color:var(--gold)}
+
+@media(max-width:900px){
+  .calc-wrap{grid-template-columns:1fr}
+  .result-top{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){
+  nav{padding:18px 24px}
+  .hero{padding:120px 24px 40px}
+  .calc-wrap,.explain,.disclaimer{padding-left:24px;padding-right:24px}
+  .panel-inputs,.panel-results{padding:26px 20px}
+  .presets{grid-template-columns:1fr 1fr}
+  .result-top{grid-template-columns:1fr}
+  .schedule-table{font-size:.68rem}
+  .schedule-table th,.schedule-table td{padding:9px 8px}
+  .register-box{padding:32px 22px}
+  .form-row{grid-template-columns:1fr}
+  footer{padding:40px 24px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Dubai Off Plan<span> Homes</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html#properties">Projects</a></li>
+    <li><a href="index.html#areas">Areas</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="index.html#faq">FAQ</a></li>
+    <li><a href="#register">Contact</a></li>
+  </ul>
+  <a href="#register" class="nav-cta">Free Consultation</a>
+  <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu-close" onclick="toggleMenu()">✕</button>
+  <a href="index.html#properties" onclick="toggleMenu()">Projects</a>
+  <a href="index.html#areas" onclick="toggleMenu()">Areas</a>
+  <a href="blog.html" onclick="toggleMenu()">Blog</a>
+  <a href="index.html#faq" onclick="toggleMenu()">FAQ</a>
+  <a href="#register" onclick="toggleMenu()">Contact</a>
+</div>
+
+<div class="hero">
+  <div class="tag">Free Tool</div>
+  <h1>Dubai Off-Plan<br><em>Payment Plan Calculator</em></h1>
+  <p>Enter a property price and choose a payment structure to see your instalment schedule instantly, including your down payment, construction-linked instalments, and any post-handover plan.</p>
+</div>
+
+<div class="calc-wrap">
+  <div class="panel panel-inputs">
+    <h3>Your Numbers</h3>
+
+    <div class="field">
+      <label>Property Price (AED)</label>
+      <input type="number" id="price" value="1500000" min="0" step="10000" oninput="calculate()">
+    </div>
+
+    <div class="field">
+      <label>Months to Handover</label>
+      <input type="number" id="months" value="24" min="1" max="72" oninput="calculate()">
+    </div>
+
+    <h3 style="margin-top:32px">Payment Structure</h3>
+    <div class="presets">
+      <div class="preset-btn active" data-preset="60-40" onclick="applyPreset('60-40')">60/40<br>Standard</div>
+      <div class="preset-btn" data-preset="80-20" onclick="applyPreset('80-20')">80/20<br>During Construction</div>
+      <div class="preset-btn" data-preset="1pct" onclick="applyPreset('1pct')">1% Monthly<br>Plan</div>
+      <div class="preset-btn" data-preset="20-80" onclick="applyPreset('20-80')">20/80<br>Post-Handover</div>
+    </div>
+
+    <div class="field">
+      <label>Down Payment <span class="field-value" id="downLabel">20%</span></label>
+      <input type="range" id="downPct" value="20" min="0" max="50" oninput="onSliderChange()">
+    </div>
+    <div class="field">
+      <label>During Construction <span class="field-value" id="constructionLabel">40%</span></label>
+      <input type="range" id="constructionPct" value="40" min="0" max="80" oninput="onSliderChange()">
+    </div>
+    <div class="field">
+      <label>On Handover <span class="field-value" id="handoverLabel">40%</span></label>
+      <input type="range" id="handoverPct" value="40" min="0" max="100" oninput="onSliderChange()">
+    </div>
+    <div class="field">
+      <label>Post-Handover <span class="field-value" id="postLabel">0%</span></label>
+      <input type="range" id="postPct" value="0" min="0" max="80" oninput="onSliderChange()">
+    </div>
+    <div class="field" id="postYearsField" style="display:none">
+      <label>Post-Handover Period (Years)</label>
+      <input type="number" id="postYears" value="3" min="1" max="10" oninput="calculate()">
+    </div>
+
+    <div class="split-warning" id="splitWarning">Your percentages add up to <span id="splitTotal"></span>%. Adjust so they total 100%.</div>
+  </div>
+
+  <div class="panel panel-results">
+    <div class="result-top">
+      <div class="result-stat"><span class="result-stat-val" id="statDown">AED 0</span><span class="result-stat-label">Due Now</span></div>
+      <div class="result-stat"><span class="result-stat-val" id="statMonthly">AED 0</span><span class="result-stat-label">Per Month, Construction</span></div>
+      <div class="result-stat"><span class="result-stat-val" id="statHandover">AED 0</span><span class="result-stat-label">Due On Handover</span></div>
+    </div>
+
+    <div class="timeline-label">Payment Timeline</div>
+    <div class="timeline" id="timeline">
+      <div class="timeline-seg seg-down" id="segDown">20%</div>
+      <div class="timeline-seg seg-construction" id="segConstruction">40%</div>
+      <div class="timeline-seg seg-handover" id="segHandover">40%</div>
+      <div class="timeline-seg seg-post" id="segPost">0%</div>
+    </div>
+    <div class="timeline-legend">
+      <div class="legend-item"><span class="legend-dot" style="background:var(--gold)"></span>Down Payment</div>
+      <div class="legend-item"><span class="legend-dot" style="background:var(--gold-light)"></span>During Construction</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#8a9a8f"></span>On Handover</div>
+      <div class="legend-item"><span class="legend-dot" style="background:var(--dark3);border:1px solid var(--border)"></span>Post-Handover</div>
+    </div>
+
+    <table class="schedule-table">
+      <thead><tr><th>Milestone</th><th>Timing</th><th>Amount</th></tr></thead>
+      <tbody id="scheduleBody"></tbody>
+    </table>
+    <div class="schedule-note">This schedule assumes construction-linked instalments are spread evenly across the months to handover. Real developer payment plans are often tied to construction milestones (e.g. 20% at foundation, 30% at structure completion) rather than a flat monthly amount. Excludes Dubai Land Department fees (typically 4% of purchase price) and admin charges.</div>
+  </div>
+</div>
+
+<div class="disclaimer">This calculator provides indicative figures for planning purposes only and does not constitute financial advice. Actual payment plans, milestones and fees vary by developer and project. Register your interest below and we will confirm the exact payment plan for any project you are considering.</div>
+
+<div class="explain">
+  <h2>How Dubai Off-Plan Payment Plans Work</h2>
+  <p>Most off-plan developers in Dubai split the purchase price into a <strong>down payment</strong>, a series of <strong>construction-linked instalments</strong>, and a <strong>handover payment</strong> due when you receive the keys. Some developers also offer a <strong>post-handover plan</strong>, letting you spread part of the price over one to five years after moving in.</p>
+  <p>The exact split varies significantly by developer and project. A <strong>60/40 plan</strong> is one of the most common structures, with 60% paid during construction and 40% on handover. A <strong>1% monthly plan</strong> spreads payments in small, predictable monthly amounts throughout the construction period. <strong>Post-handover plans</strong>, such as 20/80, reduce the amount due before handover and extend a larger portion of the price over several years afterward, which can ease cash flow for investors.</p>
+  <p>This calculator lets you model any of these structures against a real property price, so you can see roughly what your monthly commitment would look like before speaking to a specific developer.</p>
+</div>
+
+<div class="register-box" id="register">
+  <h3>Want the Exact Payment Plan for a Live Project?</h3>
+  <p>This calculator gives indicative figures. Register below and we will send you the confirmed payment plan, floor plans and pricing for any project you are interested in, free of charge.</p>
+  <div class="register-form">
+    <div id="regFormInner">
+      <div class="form-row">
+        <div class="form-group"><input type="text" id="regFirst" placeholder="First Name"></div>
+        <div class="form-group"><input type="text" id="regLast" placeholder="Last Name"></div>
+      </div>
+      <div class="form-group"><input type="email" id="regEmail" placeholder="Email Address"></div>
+      <div class="form-group"><input type="tel" id="regPhone" placeholder="Phone / WhatsApp"></div>
+      <div class="form-group"><input type="text" id="regProject" placeholder="Project You're Interested In (optional)"></div>
+      <button class="form-submit" onclick="submitReg()">Send My Enquiry</button>
+      <div class="form-note">100% free service. Your details will never be shared.</div>
+    </div>
+    <div class="success-msg" id="regSuccess"><p>Thank you, we will be in touch shortly with the details you need.</p></div>
+  </div>
+</div>
+
+<footer>
+  <a href="index.html">Dubai Off Plan Homes</a> &nbsp;·&nbsp; © 2026 All rights reserved &nbsp;·&nbsp;
+  <a href="index.html#contact">Contact Us</a> &nbsp;·&nbsp;
+  <a href="blog.html">Blog</a> &nbsp;·&nbsp;
+  <a href="index.html#areas">All Areas</a>
+</footer>
+
+<script>
+function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('open');}
+
+const presets = {
+  '60-40': {down:20, construction:40, handover:40, post:0},
+  '80-20': {down:20, construction:60, handover:20, post:0},
+  '1pct':  {down:10, construction:60, handover:10, post:20},
+  '20-80': {down:20, construction:0,  handover:0,  post:80}
+};
+
+function applyPreset(name){
+  document.querySelectorAll('.preset-btn').forEach(b=>b.classList.remove('active'));
+  document.querySelector('[data-preset="'+name+'"]').classList.add('active');
+  const p = presets[name];
+  document.getElementById('downPct').value = p.down;
+  document.getElementById('constructionPct').value = p.construction;
+  document.getElementById('handoverPct').value = p.handover;
+  document.getElementById('postPct').value = p.post;
+  calculate();
+}
+
+function onSliderChange(){
+  document.querySelectorAll('.preset-btn').forEach(b=>b.classList.remove('active'));
+  calculate();
+}
+
+function fmtAED(n){
+  return 'AED ' + Math.round(n).toLocaleString('en-US');
+}
+
+function calculate(){
+  const price = parseFloat(document.getElementById('price').value) || 0;
+  const months = Math.max(1, parseInt(document.getElementById('months').value) || 1);
+  let down = parseFloat(document.getElementById('downPct').value) || 0;
+  let construction = parseFloat(document.getElementById('constructionPct').value) || 0;
+  let handover = parseFloat(document.getElementById('handoverPct').value) || 0;
+  let post = parseFloat(document.getElementById('postPct').value) || 0;
+  const postYears = Math.max(1, parseInt(document.getElementById('postYears').value) || 1);
+
+  document.getElementById('downLabel').textContent = down + '%';
+  document.getElementById('constructionLabel').textContent = construction + '%';
+  document.getElementById('handoverLabel').textContent = handover + '%';
+  document.getElementById('postLabel').textContent = post + '%';
+  document.getElementById('postYearsField').style.display = post > 0 ? 'block' : 'none';
+
+  const total = down + construction + handover + post;
+  const warning = document.getElementById('splitWarning');
+  if (Math.round(total) !== 100){
+    warning.classList.add('show');
+    document.getElementById('splitTotal').textContent = Math.round(total);
+  } else {
+    warning.classList.remove('show');
+  }
+
+  const downAmt = price * down / 100;
+  const constructionAmt = price * construction / 100;
+  const handoverAmt = price * handover / 100;
+  const postAmt = price * post / 100;
+  const monthlyConstruction = construction > 0 ? constructionAmt / months : 0;
+  const postMonths = postYears * 12;
+  const monthlyPost = post > 0 ? postAmt / postMonths : 0;
+
+  document.getElementById('statDown').textContent = fmtAED(downAmt);
+  document.getElementById('statMonthly').textContent = monthlyConstruction > 0 ? fmtAED(monthlyConstruction) : '—';
+  document.getElementById('statHandover').textContent = fmtAED(handoverAmt);
+
+  const sum = total > 0 ? total : 100;
+  document.getElementById('segDown').style.width = (down/sum*100) + '%';
+  document.getElementById('segConstruction').style.width = (construction/sum*100) + '%';
+  document.getElementById('segHandover').style.width = (handover/sum*100) + '%';
+  document.getElementById('segPost').style.width = (post/sum*100) + '%';
+  document.getElementById('segDown').textContent = down > 6 ? down + '%' : '';
+  document.getElementById('segConstruction').textContent = construction > 6 ? construction + '%' : '';
+  document.getElementById('segHandover').textContent = handover > 6 ? handover + '%' : '';
+  document.getElementById('segPost').textContent = post > 6 ? post + '%' : '';
+  document.getElementById('segDown').style.display = down > 0 ? 'flex' : 'none';
+  document.getElementById('segConstruction').style.display = construction > 0 ? 'flex' : 'none';
+  document.getElementById('segHandover').style.display = handover > 0 ? 'flex' : 'none';
+  document.getElementById('segPost').style.display = post > 0 ? 'flex' : 'none';
+
+  const rows = [];
+  rows.push(['Down Payment (Booking)', 'On booking', downAmt]);
+  if (construction > 0) rows.push(['Construction Instalments', months + ' equal monthly payments', constructionAmt]);
+  if (handover > 0) rows.push(['Handover Payment', 'On handover, month ' + months, handoverAmt]);
+  if (post > 0) rows.push(['Post-Handover Instalments', postMonths + ' equal monthly payments over ' + postYears + ' year' + (postYears>1?'s':''), postAmt]);
+
+  document.getElementById('scheduleBody').innerHTML = rows.map(r =>
+    '<tr><td>'+r[0]+'</td><td>'+r[1]+'</td><td>'+fmtAED(r[2])+'</td></tr>'
+  ).join('');
+}
+
+async function submitReg(){
+  const first = document.getElementById('regFirst').value.trim();
+  const email = document.getElementById('regEmail').value.trim();
+  const phone = document.getElementById('regPhone').value.trim();
+  if (!first || (!email && !phone)) { alert('Please enter your name and at least an email or phone number.'); return; }
+  const btn = document.querySelector('.form-submit');
+  btn.textContent = 'Sending...'; btn.disabled = true;
+  try {
+    await fetch('https://formspree.io/f/xnjrobnq', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
+      body: JSON.stringify({
+        name: first + ' ' + document.getElementById('regLast').value,
+        email, phone,
+        project: document.getElementById('regProject').value,
+        source: 'Payment Plan Calculator',
+        _subject: 'Enquiry from Payment Plan Calculator'
+      })
+    });
+  } catch(e) {}
+  document.getElementById('regFormInner').style.display = 'none';
+  document.getElementById('regSuccess').style.display = 'block';
+}
+
+calculate();
+</script>
+</body>
+</html>
